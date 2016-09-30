@@ -1,0 +1,7 @@
+{
+  "name": "xaxi",
+  "version": "0.0.0",
+  "dependencies": {
+    "paper-toolbar": "^1.1.6"
+  }
+}
