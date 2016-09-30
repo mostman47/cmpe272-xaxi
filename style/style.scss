@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  background-color: #eee;
+}
+
+.fixed-side {
+  bottom: 0 !important;
+}
+
+.main {
+  app-drawer-layout {
+    position: relative;
+  }
+  app-drawer {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: auto;
+
+    .app-drawer {
+      padding: 0 !important;
+    }
+  }
+}

@@ -2,6 +2,7 @@
   "name": "xaxi",
   "version": "0.0.0",
   "dependencies": {
-    "paper-toolbar": "^1.1.6"
+    "paper-elements": "PolymerElements/paper-elements#^1.0.7",
+    "app-layout": "PolymerElements/app-layout#^0.10.4"
   }
 }
