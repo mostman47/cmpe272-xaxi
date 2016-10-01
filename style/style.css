@@ -9,11 +9,16 @@ body {
 .main app-drawer-layout {
   position: relative; }
 .main app-drawer {
-  position: absolute;
+  position: static;
   height: 100%;
   top: 0;
   bottom: auto; }
   .main app-drawer .app-drawer {
+    min-height: calc(100vh - 242px);
     padding: 0 !important; }
+.main .item-list paper-card {
+  margin: 20px 0; }
+  .main .item-list paper-card .header {
+    height: 200px; }
 
 /*# sourceMappingURL=style.css.map */

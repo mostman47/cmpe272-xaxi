@@ -13,13 +13,21 @@ body {
     position: relative;
   }
   app-drawer {
-    position: absolute;
+    position: static;
     height: 100%;
     top: 0;
     bottom: auto;
-
     .app-drawer {
+      min-height: calc(100vh - 242px);
       padding: 0 !important;
+    }
+  }
+  .item-list {
+    paper-card {
+      margin: 20px 0;
+      .header {
+        height: 200px;
+      }
     }
   }
 }

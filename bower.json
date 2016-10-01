@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "paper-elements": "PolymerElements/paper-elements#^1.0.7",
-    "app-layout": "PolymerElements/app-layout#^0.10.4"
+    "app-layout": "PolymerElements/app-layout#^0.10.4",
+    "bootstrap": "^3.3.7"
   }
 }
