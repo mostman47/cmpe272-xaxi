@@ -13,6 +13,8 @@
 
     <link rel="import" href="bower_components/iron-iconset-svg/iron-iconset-svg.html">
     <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/iron-icons/communication-icons.html">
+    <link rel="import" href="bower_components/iron-icons/maps-icons.html">
 
     <link rel="import" href="bower_components/paper-item/paper-icon-item.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
@@ -70,7 +72,7 @@
 
             var affixEnabled = false;
             window.mindfor.Affix.defaults.marginTop = 70;
-            window.mindfor.Affix.defaults.marginBottom = 0;
+            window.mindfor.Affix.defaults.marginBottom = 50;
 
 
             function affixUpdate() {
@@ -115,58 +117,62 @@
     <app-drawer-layout id="drawerLayout">
         <app-drawer id="Affix">
             <div class="drawer-content">
-                <paper-icon-item>
-                    <iron-icon icon="icons:home" item-icon></iron-icon>
-                    <span>Home</span>
-                </paper-icon-item>
-                <paper-icon-item>
-                    <iron-icon icon="query-builder" item-icon></iron-icon>
-                    <span>About</span>
-                </paper-icon-item>
-                <paper-icon-item>
-                    <iron-icon icon="done" item-icon></iron-icon>
-                    <span>Products</span>
-                </paper-icon-item>
-                <paper-icon-item>
-                    <iron-icon icon="drafts" item-icon></iron-icon>
-                    <span>News</span>
-                </paper-icon-item>
-                <paper-icon-item>
-                    <iron-icon icon="send" item-icon></iron-icon>
-                    <span>Contact</span>
-                </paper-icon-item>
-                <paper-icon-item>
-                    <iron-icon icon="delete" item-icon></iron-icon>
-                    <span>Trash</span>
-                </paper-icon-item>
-                <paper-icon-item>
-                    <iron-icon icon="report" item-icon></iron-icon>
-                    <span>Spam</span>
-                </paper-icon-item>
+                <a href=".">
+                    <paper-icon-item>
+                        <iron-icon icon="icons:home" item-icon></iron-icon>
+                        <span>Home</span>
+                    </paper-icon-item>
+                </a>
+                <a href="./?page=about">
+                    <paper-icon-item>
+                        <iron-icon icon="icons:font-download" item-icon></iron-icon>
+                        <span>About</span>
+                    </paper-icon-item>
+                </a>
+                <a href="./?page=product">
+                    <paper-icon-item>
+                        <iron-icon icon="maps:local-pizza" item-icon></iron-icon>
+                        <span>Products</span>
+                    </paper-icon-item>
+                </a>
+                <a href="./?page=news">
+                    <paper-icon-item>
+                        <iron-icon icon="icons:announcement" item-icon></iron-icon>
+                        <span>News</span>
+                    </paper-icon-item>
+                </a>
+                <a href="./?page=contact">
+                    <paper-icon-item>
+                        <iron-icon icon="communication:contact-mail" item-icon></iron-icon>
+                        <span>Contact</span>
+                    </paper-icon-item>
+                </a>
             </div>
         </app-drawer>
-        <div class="container-fluid item-list">
-            <div class="row">
-                <?php
-                for ($x = 0; $x <= 20; $x++) {
-                    ?>
-                    <div class="col-xs-12 col-sm-4 col-lg-3">
-                        <paper-card heading="Emmental" image="assets/images/empty_can.jpg" alt="Emmental">
-                            <div class="card-content">
-                                Emmentaler or Emmental is a yellow, medium-hard cheese that originated in the area
-                                around
-                                Emmental, Switzerland. It is one of the cheeses of Switzerland, and is sometimes known
-                                as
-                                Swiss cheese.
-                            </div>
-                        </paper-card>
-                    </div>
-                    <?php
-                }
-                ?>
 
-            </div>
-        </div>
+
+        <?php
+        if (isset($_GET["page"])) {
+            $page = $_GET["page"];
+            echo $page;
+            switch ($page) {
+                case 'about':
+                    include 'views/about.php';
+                    break;
+                case 'product':
+                    include 'views/product.php';
+                    break;
+                case 'news':
+                    include 'views/news.php';
+                    break;
+                case 'contact':
+                    include 'views/contact.php';
+                    break;
+            }
+        } else {
+            include 'views/home.php';
+        }
+        ?>
 
     </app-drawer-layout>
 

@@ -1,24 +1,35 @@
 body {
-  margin: 0;
-  font-family: 'Roboto', 'Noto', sans-serif;
-  background-color: #eee; }
+    margin: 0;
+    font-family: 'Roboto', 'Noto', sans-serif;
+    background-color: #eee;
+}
 
 .fixed-side {
-  bottom: 0 !important; }
+    bottom: 0 !important;
+}
 
 .main app-drawer-layout {
-  position: relative; }
+    position: relative;
+}
+
 .main app-drawer {
-  position: static;
-  height: 100%;
-  top: 0;
-  bottom: auto; }
-  .main app-drawer .app-drawer {
+    position: static;
+    height: 100%;
+    top: 0;
+    bottom: auto;
+}
+
+.main app-drawer .app-drawer {
     min-height: calc(100vh - 242px);
-    padding: 0 !important; }
+    padding: 0 !important;
+}
+
 .main .item-list paper-card {
-  margin: 20px 0; }
-  .main .item-list paper-card .header {
-    height: 200px; }
+    margin: 20px 0;
+}
+
+.main .item-list paper-card .header {
+    height: 200px;
+}
 
 /*# sourceMappingURL=style.css.map */
