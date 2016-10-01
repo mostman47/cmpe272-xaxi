@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="plugins/mindfor.affix.js"></script>
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -168,6 +168,9 @@
                 case 'contact':
                     include 'views/contact.php';
                     break;
+                case 'reference':
+                    include 'views/reference.php';
+                    break;
             }
         } else {
             include 'views/home.php';
@@ -188,7 +191,15 @@
         }
     });
 </script>
-
+<footer class="footer">
+    <div class="container text-center">
+        <ul class="list-inline">
+            <li><a href="./?page=reference">Reference</a></li>
+            <li>&#9829;</li>
+            <li>&copy;Nam Phan. CMPE 272 - SJSU. Education purpose only.</li>
+        </ul>
+    </div>
+</footer>
 
 </body>
 </html>
