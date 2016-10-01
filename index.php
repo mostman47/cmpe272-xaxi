@@ -116,24 +116,24 @@
         <app-drawer id="Affix">
             <div class="drawer-content">
                 <paper-icon-item>
-                    <iron-icon icon="inbox" item-icon></iron-icon>
-                    <span>Inbox</span>
+                    <iron-icon icon="icons:home" item-icon></iron-icon>
+                    <span>Home</span>
                 </paper-icon-item>
                 <paper-icon-item>
                     <iron-icon icon="query-builder" item-icon></iron-icon>
-                    <span>Snoozed</span>
+                    <span>About</span>
                 </paper-icon-item>
                 <paper-icon-item>
                     <iron-icon icon="done" item-icon></iron-icon>
-                    <span>Done</span>
+                    <span>Products</span>
                 </paper-icon-item>
                 <paper-icon-item>
                     <iron-icon icon="drafts" item-icon></iron-icon>
-                    <span>Drafts</span>
+                    <span>News</span>
                 </paper-icon-item>
                 <paper-icon-item>
                     <iron-icon icon="send" item-icon></iron-icon>
-                    <span>Sent</span>
+                    <span>Contact</span>
                 </paper-icon-item>
                 <paper-icon-item>
                     <iron-icon icon="delete" item-icon></iron-icon>
