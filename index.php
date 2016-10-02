@@ -100,7 +100,12 @@
     </script>
 </head>
 <body class="fullbleed main" unresolved>
-
+<?php
+$page = "";
+if (isset($_GET["page"])) {
+    $page = $_GET["page"];
+}
+?>
 <app-header-layout class="mindfor-affix-stop">
 
     <app-header fixed condenses effects="waterfall resize-title blend-background parallax-background">
@@ -118,31 +123,61 @@
         <app-drawer id="Affix">
             <div class="drawer-content">
                 <a href=".">
-                    <paper-icon-item>
+                    <paper-icon-item
+                        class="<?php
+                    if ($page === "") {
+                        echo "iron-selected";
+                    }
+                    ?>"
+                    >
                         <iron-icon icon="icons:home" item-icon></iron-icon>
                         <span>Home</span>
                     </paper-icon-item>
                 </a>
                 <a href="./?page=about">
-                    <paper-icon-item>
+                    <paper-icon-item
+                        class="<?php
+                        if ($page === "about") {
+                            echo "iron-selected";
+                        }
+                        ?>"
+                    >
                         <iron-icon icon="icons:font-download" item-icon></iron-icon>
                         <span>About</span>
                     </paper-icon-item>
                 </a>
                 <a href="./?page=product">
-                    <paper-icon-item>
+                    <paper-icon-item
+                        class="<?php
+                        if ($page === "product") {
+                            echo "iron-selected";
+                        }
+                        ?>"
+                    >
                         <iron-icon icon="maps:local-pizza" item-icon></iron-icon>
                         <span>Products</span>
                     </paper-icon-item>
                 </a>
                 <a href="./?page=news">
-                    <paper-icon-item>
+                    <paper-icon-item
+                        class="<?php
+                        if ($page === "news") {
+                            echo "iron-selected";
+                        }
+                        ?>"
+                    >
                         <iron-icon icon="icons:announcement" item-icon></iron-icon>
                         <span>News</span>
                     </paper-icon-item>
                 </a>
                 <a href="./?page=contact">
-                    <paper-icon-item>
+                    <paper-icon-item
+                        class="<?php
+                        if ($page === "contact") {
+                            echo "iron-selected";
+                        }
+                        ?>"
+                    >
                         <iron-icon icon="communication:contact-mail" item-icon></iron-icon>
                         <span>Contact</span>
                     </paper-icon-item>
@@ -152,9 +187,7 @@
 
 
         <?php
-        if (isset($_GET["page"])) {
-            $page = $_GET["page"];
-            echo $page;
+        if ($page !== "") {
             switch ($page) {
                 case 'about':
                     include 'views/about.php';
