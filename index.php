@@ -20,6 +20,9 @@
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
     <link rel="import" href="bower_components/paper-card/paper-card.html">
+    <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
 
     <link rel="import" href="bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
     <link rel="import" href="bower_components/app-layout/app-drawer/app-drawer.html">
@@ -125,14 +128,21 @@ if (isset($_GET["page"])) {
                 <a href=".">
                     <paper-icon-item
                         class="<?php
-                    if ($page === "") {
-                        echo "iron-selected";
-                    }
-                    ?>"
+                        if ($page === "") {
+                            echo "iron-selected";
+                        }
+                        ?>"
                     >
                         <iron-icon icon="icons:home" item-icon></iron-icon>
                         <span>Home</span>
                     </paper-icon-item>
+                </a>
+                <a href="javascript:void(0)" onclick="login.open()">
+                    <paper-icon-item>
+                        <iron-icon icon="account-circle" item-icon></iron-icon>
+                        <span>Login</span>
+                    </paper-icon-item>
+
                 </a>
                 <a href="./?page=about">
                     <paper-icon-item
@@ -182,6 +192,14 @@ if (isset($_GET["page"])) {
                         <span>Contact</span>
                     </paper-icon-item>
                 </a>
+                <a href="javascript:void(0)" onclick="">
+                    <paper-icon-item>
+                        <iron-icon icon="remove-circle" item-icon></iron-icon>
+                        <span>Log out</span>
+                    </paper-icon-item>
+
+                </a>
+
             </div>
         </app-drawer>
 
@@ -214,6 +232,10 @@ if (isset($_GET["page"])) {
 
 </app-header-layout>
 
+<?php
+include 'views/login.php';
+?>
+
 <script>
     var drawerLayout = document.getElementById('drawerLayout');
     document.getElementById('toggle').addEventListener('tap', function () {
@@ -224,6 +246,8 @@ if (isset($_GET["page"])) {
         }
     });
 </script>
+
+
 <footer class="footer">
     <div class="container text-center">
         <ul class="list-inline">
