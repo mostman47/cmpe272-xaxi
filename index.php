@@ -139,10 +139,10 @@ if (isset($_GET["page"])) {
                         <span>Home</span>
                     </paper-icon-item>
                 </a>
-                <a href="javascript:void(0)" onclick="login.open()">
+                <a href="./?page=secure">
                     <paper-icon-item>
-                        <iron-icon icon="account-circle" item-icon></iron-icon>
-                        <span>Login</span>
+                        <iron-icon icon="lock" item-icon></iron-icon>
+                        <span>Secure</span>
                     </paper-icon-item>
 
                 </a>
@@ -194,13 +194,13 @@ if (isset($_GET["page"])) {
                         <span>Contact</span>
                     </paper-icon-item>
                 </a>
-                <a href="javascript:void(0)" onclick="">
-                    <paper-icon-item>
-                        <iron-icon icon="remove-circle" item-icon></iron-icon>
-                        <span>Log out</span>
-                    </paper-icon-item>
-
-                </a>
+                <!--                <a href="javascript:void(0)" onclick="">-->
+                <!--                    <paper-icon-item>-->
+                <!--                        <iron-icon icon="remove-circle" item-icon></iron-icon>-->
+                <!--                        <span>Log out</span>-->
+                <!--                    </paper-icon-item>-->
+                <!---->
+                <!--                </a>-->
 
             </div>
         </app-drawer>
@@ -223,6 +223,9 @@ if (isset($_GET["page"])) {
                     break;
                 case 'reference':
                     include 'views/reference.php';
+                    break;
+                case 'secure':
+                    include 'views/secure.php';
                     break;
             }
         } else {

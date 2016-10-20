@@ -33,7 +33,7 @@ body {
 .iron-selected {
   color: green; }
 
-#login {
+#loginModal {
   width: 400px;
   left: calc(50% - 200px); }
 

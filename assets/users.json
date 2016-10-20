@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "admin",
+      "password": "HeWvHbLc0KVNE"
+    },
+    {
+      "name": "Mary",
+      "password": "HeWvHbLc0KVNE"
+    },
+    {
+      "name": "Own",
+      "password": "HeWvHbLc0KVNE"
+    },
+    {
+      "name": "Clay",
+      "password": "HeWvHbLc0KVNE"
+    },
+    {
+      "name": "Android",
+      "password": "HeWvHbLc0KVNE"
+    },
+    {
+      "name": "Gulp",
+      "password": "HeWvHbLc0KVNE"
+    }
+  ]
+}

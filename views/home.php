@@ -17,6 +17,9 @@
                             life</p>
                         <footer>John 4:14</footer>
                     </blockquote>
+                    <?php
+//                    include 'views/authentication.php';
+                    ?>
                 </div>
             </paper-card>
         </div>
