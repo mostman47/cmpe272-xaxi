@@ -24,12 +24,6 @@
     </form>
     <script>
         var loginEvent;
-        Polymer({
-            is: 'login-module',
-            ready: function () {
-                this.rs = "daf";
-            }
-        });
 
         function _submit(event) {
             if (loginForm.validate()) {
@@ -77,8 +71,10 @@
             if (event.detail.response) {
                 document.getElementById('login-status').innerHTML = event.detail.response.status;
                 document.getElementById('login-message').innerHTML = event.detail.response.message;
-                renderUserList(event.detail.response.users);
                 innerDialog.open();
+                if(event.detail.response.status){
+                    renderUserList(event.detail.response.users);
+                }
 
             } else {
                 document.getElementById('login-status').innerHTML = "Error";
