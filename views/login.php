@@ -1,5 +1,5 @@
 <paper-dialog id="loginModal" modal>
-    <form id="loginForm" is="iron-form" action="views/authentication.php" method="post"
+    <form id="loginForm" is="iron-form" action="service/authentication.php" method="post"
           on-iron-form-response="_onResponseRetrieved">
         <h2>Login</h2>
         <paper-input label="username" name="username" required></paper-input>

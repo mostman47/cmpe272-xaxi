@@ -14,6 +14,8 @@
     <link rel="import" href="bower_components/iron-iconset-svg/iron-iconset-svg.html">
     <link rel="import" href="bower_components/iron-icons/iron-icons.html">
     <link rel="import" href="bower_components/iron-icons/communication-icons.html">
+    <link rel="import" href="bower_components/iron-icons/social-icons.html">
+    <link rel="import" href="bower_components/iron-icons/hardware-icons.html">
     <link rel="import" href="bower_components/iron-icons/maps-icons.html">
     <link rel="import" href="bower_components/iron-form/iron-form.html">
 
@@ -25,6 +27,8 @@
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-input/paper-input.html">
     <link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
+    <link rel="import" href="bower_components/paper-styles/color.html">
+    <link rel="import" href="bower_components/paper-styles/typography.html">
 
     <link rel="import" href="bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
     <link rel="import" href="bower_components/app-layout/app-drawer/app-drawer.html">
@@ -71,6 +75,7 @@
         }
 
     </style>
+
     <script type="text/javascript">
         $(document).ready(function ($) {
             "use strict";
@@ -105,6 +110,12 @@
     </script>
 </head>
 <body class="fullbleed main" unresolved>
+
+<?php
+include 'service/mysql.php';
+
+?>
+
 <?php
 $page = "";
 if (isset($_GET["page"])) {
@@ -137,12 +148,14 @@ if (isset($_GET["page"])) {
                     >
                         <iron-icon icon="icons:home" item-icon></iron-icon>
                         <span>Home</span>
+                        <paper-ripple></paper-ripple>
                     </paper-icon-item>
                 </a>
                 <a href="./?page=secure">
                     <paper-icon-item>
                         <iron-icon icon="lock" item-icon></iron-icon>
                         <span>Secure</span>
+                        <paper-ripple></paper-ripple>
                     </paper-icon-item>
 
                 </a>
@@ -156,6 +169,7 @@ if (isset($_GET["page"])) {
                     >
                         <iron-icon icon="icons:font-download" item-icon></iron-icon>
                         <span>About</span>
+                        <paper-ripple></paper-ripple>
                     </paper-icon-item>
                 </a>
                 <a href="./?page=product">
@@ -168,6 +182,7 @@ if (isset($_GET["page"])) {
                     >
                         <iron-icon icon="maps:local-pizza" item-icon></iron-icon>
                         <span>Products</span>
+                        <paper-ripple></paper-ripple>
                     </paper-icon-item>
                 </a>
                 <a href="./?page=news">
@@ -180,6 +195,7 @@ if (isset($_GET["page"])) {
                     >
                         <iron-icon icon="icons:announcement" item-icon></iron-icon>
                         <span>News</span>
+                        <paper-ripple></paper-ripple>
                     </paper-icon-item>
                 </a>
                 <a href="./?page=contact">
@@ -192,6 +208,20 @@ if (isset($_GET["page"])) {
                     >
                         <iron-icon icon="communication:contact-mail" item-icon></iron-icon>
                         <span>Contact</span>
+                        <paper-ripple></paper-ripple>
+                    </paper-icon-item>
+                </a>
+                <a href="./?page=users">
+                    <paper-icon-item
+                        class="<?php
+                        if ($page === "users") {
+                            echo "iron-selected";
+                        }
+                        ?>"
+                    >
+                        <iron-icon icon="social:group" item-icon></iron-icon>
+                        <span>Users</span>
+                        <paper-ripple></paper-ripple>
                     </paper-icon-item>
                 </a>
                 <!--                <a href="javascript:void(0)" onclick="">-->
@@ -226,6 +256,9 @@ if (isset($_GET["page"])) {
                     break;
                 case 'secure':
                     include 'views/secure.php';
+                    break;
+                case 'users':
+                    include 'views/users.php';
                     break;
             }
         } else {

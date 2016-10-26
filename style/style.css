@@ -21,6 +21,8 @@ body {
   margin: 20px 0; }
   .main .item-list paper-card .header {
     height: 200px; }
+  .main .item-list paper-card.small iron-image {
+    padding: 0 20px; }
 
 .footer {
   position: fixed;
@@ -36,5 +38,9 @@ body {
 #loginModal {
   width: 400px;
   left: calc(50% - 200px); }
+
+.users-list paper-card {
+  margin-bottom: 20px;
+  background: #00bcd4; }
 
 /*# sourceMappingURL=style.css.map */
