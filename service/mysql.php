@@ -36,6 +36,24 @@ function getAllUser()
     return $result;
 }
 
+function createUser()
+{
+    echo "createUser";
+}
+
+function deleteUser()
+{
+
+}
+
+function search()
+{
+
+}
+print_r($_POST);
+if (isset($_POST['createUser'])) {
+    createUser();
+}
 
 //mysql_free_result($result);
 ?>

@@ -3,7 +3,7 @@
         <div class="col-xs-12">
             <paper-card class="col-xs-12" heading="Secure" alt="Secure">
                 <div class="card-content">
-                    <paper-button id="loginButton" raised onclick=" loginModal.open();">Login</paper-button>
+                    <paper-button id="loginButton" raised onclick="loginModal.open();">Login</paper-button>
                 </div>
             </paper-card>
             <paper-card class="col-xs-12" >

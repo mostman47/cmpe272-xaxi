@@ -2,37 +2,43 @@
     <div class="row">
         <div class="col-xs-12">
             <paper-card class="col-xs-12" heading="Users" alt="Users">
+                <div class="tool-bar">
+                    <paper-button id="createUserModalButton" class="pull-right blue" onclick="createUserModal.open();" raised>
+                        <iron-icon icon="icons:add"></iron-icon>
+                        Add User
+                    </paper-button>
+                </div>
             </paper-card>
         </div>
         <div class="col-xs-12 users-list">
             <br>
 
             <?php
-            $users = getAllUser();
+/*            $users = getAllUser();
             while ($rows = mysql_fetch_assoc($users)) {
-                ?>
+                */?><!--
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <paper-card heading="<?php echo $rows['first_name'].' '.$rows['last_name'];?>">
+                    <paper-card heading="<?php /*echo $rows['first_name'].' '.$rows['last_name'];*/?>">
                         <div class="card-actions">
                             <?php
-                            foreach ($rows as $key => $value) {
-                                ?>
+/*                            foreach ($rows as $key => $value) {
+                                */?>
 
                                 <div>
                                     <paper-icon-button icon="icons:chevron-right"></paper-icon-button>
                                     <span>
                             <?php
-                            echo $key . ' : ' . $value;
-                            ?>
+/*                            echo $key . ' : ' . $value;
+                            */?>
                         </span></div>
-                            <?php } ?>
+                            <?php /*} */?>
                         </div>
                     </paper-card>
                 </div>
-                <?php
-
+                --><?php
+/*
             }
-            ?>
+            */?>
 
 
         </div>

@@ -272,6 +272,7 @@ if (isset($_GET["page"])) {
 
 <?php
 include 'views/login.php';
+include 'views/createUserModal.php';
 ?>
 
 <script>
