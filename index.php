@@ -18,8 +18,13 @@
     <link rel="import" href="bower_components/iron-icons/hardware-icons.html">
     <link rel="import" href="bower_components/iron-icons/maps-icons.html">
     <link rel="import" href="bower_components/iron-form/iron-form.html">
+    <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
 
+    <link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+    <link rel="import" href="bower_components/paper-listbox/paper-listbox.html">
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
     <link rel="import" href="bower_components/paper-item/paper-icon-item.html">
+    <link rel="import" href="bower_components/paper-menu/paper-menu.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
     <link rel="import" href="bower_components/paper-card/paper-card.html">
@@ -28,7 +33,6 @@
     <link rel="import" href="bower_components/paper-input/paper-input.html">
     <link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
     <link rel="import" href="bower_components/paper-styles/color.html">
-    <link rel="import" href="bower_components/paper-styles/typography.html">
 
     <link rel="import" href="bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
     <link rel="import" href="bower_components/app-layout/app-drawer/app-drawer.html">

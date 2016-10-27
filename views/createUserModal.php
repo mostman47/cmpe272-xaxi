@@ -13,13 +13,13 @@
         <div class="buttons">
             <paper-button dialog-dismiss onclick="createUserFn._reset(event)">Cancel</paper-button>
             <paper-button class="blue" raised autofocus onclick="createUserFn._submit(event)">
-                <paper-spinner id="createUserSpinner" hidden></paper-spinner>Add
+                <paper-spinner id="createUserSpinner" hidden></paper-spinner>
+                Add
             </paper-button>
         </div>
 
     </form>
     <script>
-        //        var loginEvent;
         var createUserFn = {
             _submit: function (event) {
                 if (createUserModalForm.validate()) {
@@ -39,36 +39,25 @@
         }
 
 
-        //        function renderUserList(users) {
-        //            var str = ""
-        //            for (var i = 0; i < users.length; i++) {
-        //                str += "<li>" + users[i] + "</li>";
-        //            }
-        //            document.getElementById('user-list').innerHTML = str;
-        //            document.getElementById('loginButton').remove();
-        //
-        //        }
-        //
-        //        document.getElementById('loginForm').addEventListener('iron-form-response', function (event) {
-        //            createUserSpinner.hidden = true;
-        //            eventsDemoSubmit.disabled = false;
-        //            console.log(event);
-        //            console.log(event.detail.response);
-        //            loginEvent = event;
-        //            if (event.detail.response) {
-        //                document.getElementById('login-status').innerHTML = event.detail.response.status;
-        //                document.getElementById('login-message').innerHTML = event.detail.response.message;
-        //                innerDialog.open();
-        //                if(event.detail.response.status){
-        //                    renderUserList(event.detail.response.users);
-        //                }
-        //
-        //            } else {
-        //                document.getElementById('login-status').innerHTML = "Error";
-        //                document.getElementById('login-message').innerHTML = "Server error!";
-        //                innerDialog.open();
-        //            }
-        //        });
+        document.getElementById('createUserModalForm').addEventListener('iron-form-response', function (event) {
+            createUserSpinner.hidden = true;
+            console.log(event);
+            console.log(event.detail.response);
+            if (event.detail.response && event.detail.response.status) {
+                window.location.reload();
+//                document.getElementById('login-status').innerHTML = event.detail.response.status;
+//                document.getElementById('login-message').innerHTML = event.detail.response.message;
+//                innerDialog.open();
+//                if (event.detail.response.status) {
+//                    renderUserList(event.detail.response.users);
+//                }
+//
+//            } else {
+//                document.getElementById('login-status').innerHTML = "Error";
+//                document.getElementById('login-message').innerHTML = "Server error!";
+//                innerDialog.open();
+            }
+        });
 
     </script>
 </paper-dialog>
