@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12">
-            <paper-card class="col-xs-12" heading="Users" alt="Users">
+            <paper-card id="Affix1" class="col-xs-12" heading="Users" alt="Users">
                 <div class="tool-bar">
                     <paper-button id="createUserModalButton" class="pull-right blue" onclick="createUserModal.open();"
                                   raised>
@@ -11,9 +11,9 @@
                 </div>
                 <paper-dropdown-menu label="Search by" id="searchBy">
                     <paper-listbox class="dropdown-content" selected="0">
-                        <paper-item>name</paper-item>
+                        <paper-item>names</paper-item>
                         <paper-item>email</paper-item>
-                        <paper-item>phone number</paper-item>
+                        <paper-item>phone numbers</paper-item>
                     </paper-listbox>
                 </paper-dropdown-menu>
                 <paper-input label="Enter search text ... and click search icon" id="searchInput">

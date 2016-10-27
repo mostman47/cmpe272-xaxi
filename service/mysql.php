@@ -89,14 +89,14 @@ function searchUser($type, $value)
     }
 
     switch ($type) {
-        case "name":
+        case "names":
             $query .= " first_name LIKE '%" . $value
                 . "%' OR last_name LIKE '%" . $value . "%'";
             break;
         case "email":
             $query .= " email LIKE '%" . $value . "%'";
             break;
-        case "phone number":
+        case "phone numbers":
             $query .= " home_phone LIKE '%" . $value
                 . "%' OR cell_phone LIKE '%" . $value . "%'";
             break;

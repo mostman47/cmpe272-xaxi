@@ -61,7 +61,7 @@ body {
     margin-bottom: 20px;
     background: #00bcd4;
     width: 100%;
-    ul{
+    ul {
       height: 160px;
       overflow-y: auto;
     }
@@ -81,7 +81,13 @@ paper-button {
     background: rgb(16, 108, 200);
     color: white;
   }
-  paper-spinner{
+  paper-spinner {
     margin-right: 10px;
   }
 }
+//
+//#Affix1 {
+//  overflow: initial !important;
+//  z-index: 1;
+//  width: 100% !important;
+//}
