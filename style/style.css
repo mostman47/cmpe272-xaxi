@@ -18,9 +18,22 @@ body {
     min-height: calc(100vh - 242px);
     padding: 0 !important; }
 .main .item-list paper-card {
-  margin: 20px 0; }
+  margin: 20px 0;
+  height: 300px;
+  width: 100%; }
+  .main .item-list paper-card .card-content {
+    overflow: hidden; }
   .main .item-list paper-card .header {
     height: 200px; }
+  .main .item-list paper-card .title h4 {
+    width: calc(100% - 40px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; }
+  .main .item-list paper-card .price {
+    position: absolute;
+    top: 30px;
+    right: 20px; }
   .main .item-list paper-card.small iron-image {
     padding: 0 20px; }
 
@@ -57,5 +70,9 @@ paper-button.blue {
   color: white; }
 paper-button paper-spinner {
   margin-right: 10px; }
+
+/*product-wrapper*/
+.product-wrapper img {
+  height: 300px; }
 
 /*# sourceMappingURL=style.css.map */

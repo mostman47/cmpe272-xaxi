@@ -179,7 +179,7 @@ if (isset($_GET["page"])) {
                 <a href="./?page=product">
                     <paper-icon-item
                         class="<?php
-                        if ($page === "product") {
+                        if ($page === "product" || $page === "product-item") {
                             echo "iron-selected";
                         }
                         ?>"
@@ -248,6 +248,9 @@ if (isset($_GET["page"])) {
                     break;
                 case 'product':
                     include 'views/product.php';
+                    break;
+                case 'product-item':
+                    include 'views/product.item.php';
                     break;
                 case 'news':
                     include 'views/news.php';

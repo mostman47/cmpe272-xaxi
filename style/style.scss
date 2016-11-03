@@ -26,8 +26,26 @@ body {
   .item-list {
     paper-card {
       margin: 20px 0;
+      height: 300px;
+      width: 100%;
+      .card-content{
+        overflow: hidden;
+      }
       .header {
         height: 200px;
+      }
+      .title{
+        h4{
+          width: calc(100% - 40px);
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      .price{
+        position: absolute;
+        top: 30px;
+        right: 20px;
       }
       &.small {
         iron-image {
@@ -85,6 +103,14 @@ paper-button {
     margin-right: 10px;
   }
 }
+
+/*product-wrapper*/
+.product-wrapper{
+  img{
+    height: 300px;
+  }
+}
+
 //
 //#Affix1 {
 //  overflow: initial !important;

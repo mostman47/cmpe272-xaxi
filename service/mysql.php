@@ -21,15 +21,50 @@ function getAllUser()
         if (!$result) {
             die('Invalid query: ' . mysql_error());
         } else {
-//            $result = mysql_fetch_assoc($result);
-//            print_r("done");
-//            while ($rows = mysql_fetch_assoc($result)) {
-//                foreach ($rows as $key => $value) {
-//                    echo $key . ' : ' . $value . "\n";
-//                }
-//            }
-//            print_r(mysql_fetch_assoc($result));
-//            return mysql_fetch_assoc($result);
+            return $result;
+        }
+    }
+
+
+}
+
+function getAllProduct()
+{
+    $db_selected = connectDataBase();
+
+    $query = 'SELECT * FROM products ORDER BY id DESC';
+
+    $result = array();
+
+    if (!$db_selected) {
+        die("Could not connect to database");
+    } else {
+        $result = mysql_query($query);
+        if (!$result) {
+            die('Invalid query: ' . mysql_error());
+        } else {
+            return $result;
+        }
+    }
+
+
+}
+
+function getProductById($id)
+{
+    $db_selected = connectDataBase();
+
+    $query = 'SELECT * FROM products WHERE id = ' . $id;
+
+    $result = array();
+
+    if (!$db_selected) {
+        die("Could not connect to database");
+    } else {
+        $result = mysql_query($query);
+        if (!$result) {
+            die('Invalid query: ' . mysql_error());
+        } else {
             return $result;
         }
     }
