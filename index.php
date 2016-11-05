@@ -33,6 +33,8 @@
     <link rel="import" href="bower_components/paper-input/paper-input.html">
     <link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
     <link rel="import" href="bower_components/paper-styles/color.html">
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="bower_components/paper-badge/paper-badge.html">
 
     <link rel="import" href="bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
     <link rel="import" href="bower_components/app-layout/app-drawer/app-drawer.html">
@@ -179,7 +181,7 @@ if (isset($_GET["page"])) {
                 <a href="./?page=product">
                     <paper-icon-item
                         class="<?php
-                        if ($page === "product" || $page === "product-item") {
+                        if ($page === "product" || $page === "product-item" || $page === "product-most" || $page === "product-previous") {
                             echo "iron-selected";
                         }
                         ?>"
@@ -251,6 +253,12 @@ if (isset($_GET["page"])) {
                     break;
                 case 'product-item':
                     include 'views/product.item.php';
+                    break;
+                case 'product-most':
+                    include 'views/product.most.php';
+                    break;
+                case 'product-previous':
+                    include 'views/product.previous.php';
                     break;
                 case 'news':
                     include 'views/news.php';

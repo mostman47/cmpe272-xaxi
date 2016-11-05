@@ -2,6 +2,10 @@
     <div class="row">
         <div class="col-xs-12">
             <paper-card class="col-xs-12" heading="Products" alt="Products">
+                <ul class="list-inline text-center">
+                    <li><a href="./?page=product-most"><iron-icon icon="icons:stars"></iron-icon>&nbsp;Most visited products</a></li>
+                    <li><a href="./?page=product-previous"><iron-icon icon="icons:stars"></iron-icon>&nbsp;Previously visited products</a></li>
+                </ul>
             </paper-card>
         </div>
     </div>

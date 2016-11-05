@@ -8,67 +8,37 @@ function connectDataBase()
 
 function getAllUser()
 {
-    $db_selected = connectDataBase();
 
     $query = 'SELECT * FROM users ORDER BY id DESC';
 
-    $result = array();
-
-    if (!$db_selected) {
-        die("Could not connect to database");
-    } else {
-        $result = mysql_query($query);
-        if (!$result) {
-            die('Invalid query: ' . mysql_error());
-        } else {
-            return $result;
-        }
-    }
-
+    return selectQuery($query);
 
 }
 
 function getAllProduct()
 {
-    $db_selected = connectDataBase();
 
-    $query = 'SELECT * FROM products ORDER BY id DESC';
+    $query = 'SELECT * FROM products';
 
-    $result = array();
-
-    if (!$db_selected) {
-        die("Could not connect to database");
-    } else {
-        $result = mysql_query($query);
-        if (!$result) {
-            die('Invalid query: ' . mysql_error());
-        } else {
-            return $result;
-        }
-    }
-
+    return selectQuery($query);
 
 }
 
 function getProductById($id)
 {
-    $db_selected = connectDataBase();
 
     $query = 'SELECT * FROM products WHERE id = ' . $id;
 
-    $result = array();
+    return selectQuery($query);
 
-    if (!$db_selected) {
-        die("Could not connect to database");
-    } else {
-        $result = mysql_query($query);
-        if (!$result) {
-            die('Invalid query: ' . mysql_error());
-        } else {
-            return $result;
-        }
-    }
+}
 
+function getProductByArrayId($array)
+{
+    $array = implode(",", $array);
+    $query = 'SELECT * FROM products WHERE id IN (' . $array . ')';
+
+    return selectQuery($query);
 
 }
 
@@ -139,8 +109,11 @@ function searchUser($type, $value)
 
     $query .= " ORDER BY id DESC";
 
-//    print_r($query);
+    return selectQuery($query);
+}
 
+function selectQuery($query)
+{
     $db_selected = connectDataBase();
 
     $result = array();

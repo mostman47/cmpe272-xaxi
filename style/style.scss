@@ -12,6 +12,10 @@ body {
 .main {
   app-drawer-layout {
     position: relative;
+
+  }
+  .app-drawer-layout{
+    z-index: 1;
   }
   app-drawer {
     position: static;

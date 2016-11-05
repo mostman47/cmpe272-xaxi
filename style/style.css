@@ -9,6 +9,8 @@ body {
 
 .main app-drawer-layout {
   position: relative; }
+.main .app-drawer-layout {
+  z-index: 1; }
 .main app-drawer {
   position: static;
   height: 100%;
