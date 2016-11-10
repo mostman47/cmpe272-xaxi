@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50c3cabb-a896-4cf5-afbc-6803d0250901" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/other_users.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/service/test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/test.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/test1.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/external_users.php" afterPath="$PROJECT_DIR$/service/external_users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/home.php" afterPath="$PROJECT_DIR$/views/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/other_users.php" afterPath="$PROJECT_DIR$/views/other_users.php" />
     </list>
     <ignored path="cmpe272-xaxi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,8 +56,8 @@
       <file leaf-file-name="other_users.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/other_users.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="5" column="87" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -271,7 +264,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../atprofvopak/app" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -621,12 +614,12 @@
       <workItem from="1478365508336" duration="2512000" />
       <workItem from="1478631871474" duration="11000" />
       <workItem from="1478741707403" duration="1675000" />
-      <workItem from="1478753188838" duration="2823000" />
+      <workItem from="1478753188838" duration="3310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88565000" />
+    <option name="totallyTimeSpent" value="89052000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
@@ -1038,8 +1031,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/other_users.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="5" column="87" selection-start-line="5" selection-start-column="87" selection-end-line="5" selection-end-column="87" />
           <folding />
         </state>
       </provider>
