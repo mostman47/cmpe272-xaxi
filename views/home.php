@@ -19,6 +19,10 @@
                     </blockquote>
                     <?php
 //                    include 'views/authentication.php';
+                    ob_start();
+                    setcookie('cookiename', 'data', time()+60*60*24*365);
+                    ob_end_flush();
+phpinfo();
                     ?>
                 </div>
             </paper-card>
