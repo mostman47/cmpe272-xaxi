@@ -17,13 +17,6 @@
                             life</p>
                         <footer>John 4:14</footer>
                     </blockquote>
-                    <?php
-//                    include 'views/authentication.php';
-                    ob_start();
-                    setcookie('cookiename', 'data', time()+60*60*24*365);
-                    ob_end_flush();
-phpinfo();
-                    ?>
                 </div>
             </paper-card>
         </div>

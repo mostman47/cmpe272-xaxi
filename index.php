@@ -230,6 +230,19 @@ if (isset($_GET["page"])) {
                         <paper-ripple></paper-ripple>
                     </paper-icon-item>
                 </a>
+                <a href="./?page=other_users">
+                    <paper-icon-item
+                        class="<?php
+                        if ($page === "other_users") {
+                            echo "iron-selected";
+                        }
+                        ?>"
+                    >
+                        <iron-icon icon="social:group" item-icon></iron-icon>
+                        <span>Users from others</span>
+                        <paper-ripple></paper-ripple>
+                    </paper-icon-item>
+                </a>
                 <!--                <a href="javascript:void(0)" onclick="">-->
                 <!--                    <paper-icon-item>-->
                 <!--                        <iron-icon icon="remove-circle" item-icon></iron-icon>-->
@@ -274,6 +287,9 @@ if (isset($_GET["page"])) {
                     break;
                 case 'users':
                     include 'views/users.php';
+                    break;
+                case 'other_users':
+                    include 'views/other_users.php';
                     break;
             }
         } else {
