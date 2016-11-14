@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Noto', sans-serif;
+  background-color: #eee;
+  padding-bottom: 50px;
+}
+
+.fixed-side {
+  bottom: 0 !important;
+}
+
+.main {
+  app-header{
+    app-toolbar{
+      paper-button{
+        font-size: 14px;
+        padding-right: 15px;
+        paper-icon-button{
+          width: 25px;
+          height: 25px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+  app-drawer-layout {
+    position: relative;
+
+  }
+  .app-drawer-layout{
+    z-index: 1;
+  }
+  app-drawer {
+    position: static;
+    height: 100%;
+    top: 0;
+    bottom: auto;
+    .app-drawer {
+      min-height: calc(100vh - 242px);
+      padding: 0 !important;
+    }
+  }
+  .item-list {
+    paper-card {
+      margin: 20px 0;
+      height: 300px;
+      width: 100%;
+      .card-content{
+        overflow: hidden;
+      }
+      .header {
+        height: 200px;
+      }
+      .title{
+        h4{
+          width: calc(100% - 40px);
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      .price{
+        position: absolute;
+        top: 30px;
+        right: 20px;
+      }
+      &.small {
+        iron-image {
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #f5f5f5;
+  padding: 10px;
+}
+
+.iron-selected {
+  color: green;
+}
+
+#loginModal, #createUserModal, #signUpModal {
+  width: 400px;
+  left: calc(50% - 200px);
+}
+
+.users-list {
+  paper-card {
+    margin-bottom: 20px;
+    background: #00bcd4;
+    width: 100%;
+    ul {
+      height: 160px;
+      overflow-y: auto;
+    }
+  }
+}
+
+paper-card {
+  .tool-bar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    paper-dropdown-menu{
+      margin-top: -10px;
+    }
+  }
+}
+
+paper-button {
+  &.blue {
+    background: rgb(16, 108, 200);
+    color: white;
+  }
+  &.green {
+    background: yellowgreen;
+    color: black;
+  }
+  paper-spinner {
+    margin-right: 10px;
+  }
+}
+
+/*product-wrapper*/
+.product-wrapper{
+  img{
+    height: 300px;
+  }
+}
+
+//
+//#Affix1 {
+//  overflow: initial !important;
+//  z-index: 1;
+//  width: 100% !important;
+//}
