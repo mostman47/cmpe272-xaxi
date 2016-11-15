@@ -60,6 +60,10 @@ body {
 #loginModal, #createUserModal, #signUpModal {
   width: 400px;
   left: calc(50% - 200px); }
+  #loginModal .close, #createUserModal .close, #signUpModal .close {
+    position: absolute;
+    right: 0;
+    top: 0; }
 
 .users-list paper-card {
   margin-bottom: 20px;

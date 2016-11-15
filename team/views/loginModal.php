@@ -1,6 +1,7 @@
 <paper-dialog id="loginModal" modal>
-    <form id="loginForm" is="iron-form" action="service/authentication.php" method="post"
+    <form id="loginForm" is="iron-form" action="service/login.php" method="post"
           on-iron-form-response="_onResponseRetrieved">
+        <paper-icon-button icon="icons:close" class="pull-right close" dialog-dismiss></paper-icon-button>
         <h2>Login</h2>
         <paper-input label="username" name="username" required></paper-input>
         <paper-input label="password" name="password" type="password" required></paper-input>

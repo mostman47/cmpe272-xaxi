@@ -1,6 +1,7 @@
 <paper-dialog id="signUpModal" modal>
-    <form id="signUpForm" is="iron-form" action="service/authentication.php" method="post"
+    <form id="signUpForm" is="iron-form" action="service/signup.php" method="post"
           on-iron-form-response="_onResponseRetrieved">
+        <paper-icon-button icon="icons:close" class="pull-right close" dialog-dismiss></paper-icon-button>
         <h2>Sign Up</h2>
         <paper-input label="username" name="username" required></paper-input>
         <paper-input label="password" name="password" type="password" required></paper-input>
@@ -32,7 +33,7 @@
                         document.getElementById('signUp-status').innerHTML = "Error";
                         document.getElementById('signUp-message').innerHTML = "Re-type password is not the same!";
                         innerSUDialog.open();
-                    }else {
+                    } else {
                         signUpSpinner.active = true;
                         signUpSpinner.hidden = false;
                         // Simulate a slow server response.
@@ -51,6 +52,7 @@
                 console.log(signUpModal);
                 if (signUpEvent.detail.response && signUpEvent.detail.response.status) {
                     signUpModal.close();
+                    loginModal.open();
                 }
             }
         };
@@ -70,14 +72,16 @@
             console.log(event.detail.response);
             signUpEvent = event;
             if (event.detail.response) {
-                document.getElementById('signUp-status').innerHTML = event.detail.response.status;
+                document.getElementById('signUp-status').innerHTML = event.detail.response.status ?
+                    '<paper-icon-button icon="icons:check-circle"></paper-icon-button>'
+                    : '<paper-icon-button icon="icons:warning"></paper-icon-button>';
                 document.getElementById('signUp-message').innerHTML = event.detail.response.message;
                 innerSUDialog.open();
                 if (event.detail.response.status) {
                     renderUserList(event.detail.response.users);
                 }
             } else {
-                document.getElementById('signUp-status').innerHTML = "Error";
+                document.getElementById('signUp-status').innerHTML = '<paper-icon-button icon="icons:warning"></paper-icon-button>';
                 document.getElementById('signUp-message').innerHTML = "Server error!";
                 innerSUDialog.open();
             }

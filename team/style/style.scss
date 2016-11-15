@@ -10,12 +10,12 @@ body {
 }
 
 .main {
-  app-header{
-    app-toolbar{
-      paper-button{
+  app-header {
+    app-toolbar {
+      paper-button {
         font-size: 14px;
         padding-right: 15px;
-        paper-icon-button{
+        paper-icon-button {
           width: 25px;
           height: 25px;
           padding: 5px;
@@ -27,7 +27,7 @@ body {
     position: relative;
 
   }
-  .app-drawer-layout{
+  .app-drawer-layout {
     z-index: 1;
   }
   app-drawer {
@@ -45,21 +45,21 @@ body {
       margin: 20px 0;
       height: 300px;
       width: 100%;
-      .card-content{
+      .card-content {
         overflow: hidden;
       }
       .header {
         height: 200px;
       }
-      .title{
-        h4{
+      .title {
+        h4 {
           width: calc(100% - 40px);
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
         }
       }
-      .price{
+      .price {
         position: absolute;
         top: 30px;
         right: 20px;
@@ -89,6 +89,11 @@ body {
 #loginModal, #createUserModal, #signUpModal {
   width: 400px;
   left: calc(50% - 200px);
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 .users-list {
@@ -108,7 +113,7 @@ paper-card {
     position: absolute;
     top: 10px;
     right: 10px;
-    paper-dropdown-menu{
+    paper-dropdown-menu {
       margin-top: -10px;
     }
   }
@@ -129,8 +134,8 @@ paper-button {
 }
 
 /*product-wrapper*/
-.product-wrapper{
-  img{
+.product-wrapper {
+  img {
     height: 300px;
   }
 }
