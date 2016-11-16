@@ -144,6 +144,11 @@ if (isset($_GET["page"])) {
                 <paper-icon-button icon="icons:account-circle"></paper-icon-button>
                 Login
             </paper-button>
+            <small>Hi,<?php ?></small>
+            <paper-button class="green" id="" raised onclick="loginModal.open();">
+                <paper-icon-button icon="icons:account-circle"></paper-icon-button>
+                Login out
+            </paper-button>
         </app-toolbar>
         <app-toolbar class="tall">
             <h1 main-title>Multi-Product</h1>

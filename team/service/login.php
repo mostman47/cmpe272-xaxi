@@ -9,14 +9,15 @@ function login()
         die();
     }
 
-    $pass = crypt($_POST['password'], $HASH_SALT);
+    $pass = crypt($_POST['password'], "Hello");
     $query = "SELECT * FROM users WHERE username = '"
         . $_POST['username'] . "' AND password = '$pass' ";
-    print_r($query);
     $result = selectQuery($query);
-echo mysql_num_rows($result);
     if (mysql_num_rows($result) > 0) {
-        print_r('{"status": true,"message":"logined"}');
+        $rt = mysql_fetch_assoc($result);
+        $rt['status'] = true;
+        $rt['password'] = null;
+        print_r(json_encode($rt));
     } else {
         print_r('{"status": false,"message":"username is not existed"}');
     }

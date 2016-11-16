@@ -9,7 +9,7 @@
         <div class="buttons">
 
             <paper-button dialog-dismiss onclick="loginFn._reset(event)">Cancel</paper-button>
-            <paper-button class="blue" raised autofocus onclick="loginFn._submit(event)" >
+            <paper-button class="blue" raised autofocus onclick="loginFn._submit(event)">
                 <paper-spinner id="loginSpinner" hidden></paper-spinner>
                 Login
             </paper-button>
@@ -47,14 +47,6 @@
                 }
             }
         };
-        function renderUserList(users) {
-            var str = ""
-            for (var i = 0; i < users.length; i++) {
-                str += "<li>" + users[i] + "</li>";
-            }
-            document.getElementById('user-list').innerHTML = str;
-            document.getElementById('loginButton').remove();
-        };
 
         document.getElementById('loginForm').addEventListener('iron-form-response', function (event) {
             loginSpinner.hidden = true;
@@ -62,11 +54,12 @@
             console.log(event.detail.response);
             loginEvent = event;
             if (event.detail.response) {
-                document.getElementById('login-status').innerHTML = event.detail.response.status;
-                document.getElementById('login-message').innerHTML = event.detail.response.message;
-                innerDialog.open();
+//                document.getElementById('login-status').innerHTML = event.detail.response.status;
+//                document.getElementById('login-message').innerHTML = event.detail.response.message;
+//                innerDialog.open();
                 if (event.detail.response.status) {
-                    renderUserList(event.detail.response.users);
+                    window.localStorage["loginUser"] = JSON.stringify(event.detail.response);
+                    window.location.reload();
                 }
             } else {
                 document.getElementById('login-status').innerHTML = "Error";

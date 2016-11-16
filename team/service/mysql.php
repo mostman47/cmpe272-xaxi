@@ -1,5 +1,5 @@
 <?php
-$HASH_SALT = "Hello";
+
 function connectDataBase()
 {
     $database = mysql_connect('localhost:3306', 'root', 'admin');
