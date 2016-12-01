@@ -14,14 +14,15 @@ function createUser()
         print_r('{"status": false,"message":"username is existed"}');
         die();
     }
-    $pass = crypt($_POST['password'], $HASH_SALT);
+
+    $pass = crypt($_POST['password'], "Hello");
+
     $query = "INSERT INTO users (username, password)VALUES ('"
-        . $_POST['username'] . "','" . $pass . "')";
+        . $_POST['username'] . "','$pass')";
     $result = selectQuery($query);
     if ($result > 0) {
         print_r('{"status": true,"message":"user is created"}');
     }
-//    print_r(mysql_num_rows($result));
 
 }
 

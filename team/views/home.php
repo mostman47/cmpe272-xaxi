@@ -8,6 +8,7 @@
                     <ul>
                         <li>Nam Phan - <a href="http://myxaxi.net/">http://myxaxi.net/</a></li>
                         <li>Huzaifa Aejaz - <a href="http://konstella.me/">http://konstella.me/</a></li>
+
                     </ul>
                 </div>
             </paper-card>

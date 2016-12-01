@@ -56,15 +56,6 @@
                 }
             }
         };
-        function renderUserList(users) {
-            var str = ""
-            for (var i = 0; i < users.length; i++) {
-                str += "<li>" + users[i] + "</li>";
-            }
-            document.getElementById('user-list').innerHTML = str;
-            document.getElementById('signUpButton').remove();
-        }
-        ;
 
         document.getElementById('signUpForm').addEventListener('iron-form-response', function (event) {
             signUpSpinner.hidden = true;
@@ -78,7 +69,6 @@
                 document.getElementById('signUp-message').innerHTML = event.detail.response.message;
                 innerSUDialog.open();
                 if (event.detail.response.status) {
-                    renderUserList(event.detail.response.users);
                 }
             } else {
                 document.getElementById('signUp-status').innerHTML = '<paper-icon-button icon="icons:warning"></paper-icon-button>';
