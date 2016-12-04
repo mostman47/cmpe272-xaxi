@@ -2,43 +2,27 @@
 print_r($_GET['id']);
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $product = getProductById($id);
-//    add cookie previous
-    $cookie = $_COOKIE['product-previous'];
-    if (isset($cookie)) {
-        $cookie = json_decode($cookie, true);
-        $key = array_search($id, $cookie);
-        if (false !== $key) {
-        } else {
-            while (count($cookie) > 4) {
-                array_shift($cookie);
-            }
-            array_push($cookie, $id);
-            setcookie('product-previous', json_encode($cookie));
-        }
-    } else {
-        setcookie('product-previous', json_encode(array($id)));
-    }
-    //    add cookie most
-    $most = $_COOKIE['product-most'];
-    print_r($most);
-    if (isset($most)) {
-        $most = json_decode($most, true);
-        if (array_key_exists($id, $most)) {
-            $most[$id] = $most[$id] + 1;
-            setcookie('product-most', json_encode($most));
-        } else {
-            $most[$id] = 1;
-            setcookie('product-most', json_encode($most));
-        }
-    } else {
-        setcookie('product-most', json_encode(array($id => 1)));
-    }
+    $product = searchProductItem($id);
+    updateVisit($id);
 } else {
     $product = null;
 }
-$product = mysql_fetch_assoc($product);
-print_r($product);
+
+function searchProductItem($id)
+{
+    $products = getAllProductExternal();
+    foreach ($products as $rows) {
+        if ($rows['id'] == $id) {
+            return $rows;
+        }
+    }
+}
+
+function updateVisit($id)
+{
+    $visit = updateVisitSQL($id);
+    print_r(mysql_fetch_assoc($visit));
+}
 
 ?>
 <div class="container-fluid product-wrapper">
@@ -47,6 +31,9 @@ print_r($product);
             <paper-card class="col-xs-12" heading="<?php echo $product['name']; ?>"
                         alt="<?php echo $product['name']; ?>">
                 <div class="card-content">
+                    <?php
+                    updateVisit('a');
+                    ?>
                     <div class="row">
                         <div class="col-xs-12 col-sm-7">
                             <div>
@@ -69,7 +56,7 @@ print_r($product);
                                 </ul>
                             </div>
                             <div class="text-center">
-                                <img src="assets/images/soda/<?php echo $product['image']; ?>" alt="">
+                                <img src="<?php echo $product['image']; ?>" alt="">
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-5">

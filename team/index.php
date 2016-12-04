@@ -136,19 +136,21 @@ if (isset($_GET["page"])) {
             <h4 condensed-title>Multi-Product Market</h4>
             <!--            <paper-icon-button icon="search"></paper-icon-button>-->
 
-            <paper-button class="green" id="" raised onclick="signUpModal.open();">
+            <paper-button class="green" is-login="false" raised onclick="signUpModal.open();">
                 <paper-icon-button icon="icons:assignment-ind"></paper-icon-button>
                 Sign Up
             </paper-button>
-            <paper-button class="green" id="" raised onclick="loginModal.open();">
+            <paper-button class="green" is-login="false" raised onclick="loginModal.open();">
                 <paper-icon-button icon="icons:account-circle"></paper-icon-button>
                 Login
             </paper-button>
-            <small>Hi,<?php ?></small>
-            <paper-button class="green" id="" raised onclick="loginModal.open();">
-                <paper-icon-button icon="icons:account-circle"></paper-icon-button>
-                Login out
-            </paper-button>
+            <paper-menu-button is-login="true">
+                <paper-icon-button icon="icons:account-circle" class="dropdown-trigger"></paper-icon-button>
+                <paper-menu class="dropdown-content">
+                    <paper-item onclick="logout()"><a href="javascript:void(0)">Log out</a></paper-item>
+                </paper-menu>
+            </paper-menu-button>
+            <small is-login="true">Hi, <span>Nam</span></small>
         </app-toolbar>
         <app-toolbar class="tall">
             <h1 main-title>Multi-Product</h1>
@@ -287,5 +289,6 @@ include 'views/signUpModal.php';
     </div>
 </footer>
 
+<script src="script/main.js"></script>
 </body>
 </html>

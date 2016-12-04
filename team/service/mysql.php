@@ -1,5 +1,6 @@
 <?php
 
+
 function connectDataBase()
 {
     $database = mysql_connect('localhost:3306', 'root', 'admin');
@@ -15,6 +16,46 @@ function getAllUser()
 
 }
 
+function getAllVisit()
+{
+
+    $query = 'SELECT * FROM visit';
+
+    return selectQuery($query);
+
+}
+
+function searchVisit($productId)
+{
+    $query = 'SELECT * FROM visit WHERE product_id = "' . $productId . '"';
+    return selectQuery($query);
+}
+
+function createVisitObj($productId)
+{
+    $query = 'INSERT INTO visit (`product_id`,`count`) VALUES ("' . $productId . '",1)';
+//    print_r($query);
+    return selectQuery($query);
+}
+
+function updateVisitObj($productId, $count)
+{
+    $count++;
+    $query = 'UPDATE visit SET `count` = ' . $count . ' WHERE product_id = "' . $productId . '"';
+//    print_r($query);
+    return selectQuery($query);
+}
+
+function updateVisitSQL($productId)
+{
+    $search = searchVisit($productId);
+    if (mysql_num_rows($search) > 0) {
+        return updateVisitObj($productId, mysql_fetch_assoc($search)['count']);
+    } else {
+        return createVisitObj($productId);
+    }
+}
+
 function getAllProduct()
 {
 
@@ -22,6 +63,29 @@ function getAllProduct()
 
     return selectQuery($query);
 
+}
+
+function getAllProductExternal()
+{
+    $external_urls = array(0 => 'http://localhost:8888/cmpe272-xaxi/service/external_products.php');
+    $products = array();
+    foreach ($external_urls as $url) {
+//        print_r($url);
+        $ch = curl_init();
+
+        curl_setopt_array($ch, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST => true,
+            CURLOPT_FOLLOWLOCATION => true
+        ));
+
+        $output = curl_exec($ch);
+        $output = json_decode($output, true);
+        $products = array_merge($products, $output);
+    }
+//    print_r($product);
+    return $products;
 }
 
 function getProductById($id)
@@ -39,9 +103,7 @@ function getProductByArrayId($array)
     $query = 'SELECT * FROM products WHERE id IN (' . $array . ')';
 
     return selectQuery($query);
-
 }
-
 
 
 function searchUser($type, $value)

@@ -7,13 +7,12 @@
     </div>
     <div class="row item-list">
         <?php
-        $products = getAllProduct();
-
-        while ($rows = mysql_fetch_assoc($products)) {
+        $products = getAllProductExternal();
+        foreach ($products as $rows) {
             ?>
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                 <a href="./?page=product-item&id=<?php echo $rows['id']; ?>">
-                    <paper-card image="assets/images/soda/<?php echo $rows['image']; ?>" class="small">
+                    <paper-card image="<?php echo $rows['image']; ?>" class="small">
                         <div class="card-content">
                             <div class="title"><h4><?php echo $rows['name']; ?></h4>
                                 <small class="price">$<?php echo $rows['price']; ?></small>

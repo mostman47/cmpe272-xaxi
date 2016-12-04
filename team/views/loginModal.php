@@ -58,7 +58,7 @@
 //                document.getElementById('login-message').innerHTML = event.detail.response.message;
 //                innerDialog.open();
                 if (event.detail.response.status) {
-                    window.localStorage["loginUser"] = JSON.stringify(event.detail.response);
+                    window.localStorage.setItem('loginUser', JSON.stringify(event.detail.response));
                     window.location.reload();
                 }
             } else {
