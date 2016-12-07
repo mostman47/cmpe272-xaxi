@@ -31,7 +31,8 @@ body {
   height: 300px;
   width: 100%; }
   .main .item-list paper-card .card-content {
-    overflow: hidden; }
+    overflow: hidden;
+    height: 80px; }
   .main .item-list paper-card .header {
     height: 200px; }
   .main .item-list paper-card .title h4 {
@@ -73,14 +74,12 @@ body {
     height: 160px;
     overflow-y: auto; }
 
-paper-card {
-  overflow: hidden; }
-  paper-card .tool-bar {
-    position: absolute;
-    top: 10px;
-    right: 10px; }
-    paper-card .tool-bar paper-dropdown-menu {
-      margin-top: -10px; }
+paper-card .tool-bar {
+  position: absolute;
+  top: 10px;
+  right: 10px; }
+  paper-card .tool-bar paper-dropdown-menu {
+    margin-top: -10px; }
 
 paper-button.blue {
   background: #106cc8;
@@ -94,5 +93,18 @@ paper-button paper-spinner {
 /*product-wrapper*/
 .product-wrapper img {
   height: 300px; }
+
+.rate-group .star {
+  font-size: 20px; }
+  .rate-group .star:before {
+    content: "\f006"; }
+  .rate-group .star.active:before {
+    content: "\f005"; }
+.rate-group:hover li .star:before {
+  content: "\f005"; }
+.rate-group > li:hover .star:before {
+  content: "\f005"; }
+.rate-group > li:hover ~ li .star:before {
+  content: "\f006"; }
 
 /*# sourceMappingURL=style.css.map */

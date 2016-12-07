@@ -3,11 +3,11 @@
         <div class="col-xs-12">
             <paper-card class="col-xs-12" heading="Top Five" alt="Top Five">
                 <div class="tool-bar">
-<!--                    <paper-button id="createUserModalButton" class="pull-right blue" onclick="createUserModal.open();"-->
-<!--                                  raised>-->
-<!--                        <iron-icon icon="icons:add"></iron-icon>-->
-<!--                        Add User-->
-<!--                    </paper-button>-->
+                    <!--                    <paper-button id="createUserModalButton" class="pull-right blue" onclick="createUserModal.open();"-->
+                    <!--                                  raised>-->
+                    <!--                        <iron-icon icon="icons:add"></iron-icon>-->
+                    <!--                        Add User-->
+                    <!--                    </paper-button>-->
                     <paper-dropdown-menu label="Filter by" id="searchBy">
                         <paper-listbox class="dropdown-content" selected="0">
                             <paper-item>Top five most visited</paper-item>
@@ -20,6 +20,10 @@
         </div>
     </div>
     <div class="row item-list">
+        <?php
+        $products = getAllProductExternal();
+        print_r($products);
+        ?>
         <?php
         $cookie = $_COOKIE['product-most'];
 

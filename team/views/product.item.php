@@ -30,29 +30,27 @@ function updateVisit($id)
         <div class="col-xs-12">
             <paper-card class="col-xs-12" heading="<?php echo $product['name']; ?>"
                         alt="<?php echo $product['name']; ?>">
+                <div class="tool-bar">
+                    <a href="./?page=product">
+                        <paper-button class="pull-right blue"
+                                      raised>
+                            <iron-icon icon="icons:chevron-left"></iron-icon>
+                            Back
+                        </paper-button>
+                    </a>
+                </div>
                 <div class="card-content">
-                    <?php
-                    updateVisit('a');
-                    ?>
                     <div class="row">
                         <div class="col-xs-12 col-sm-7">
                             <div>
-                                <ul class="list-inline">
-                                    <li><a href="">
-                                            <iron-icon icon="icons:star-border" item-icon></iron-icon>
-                                        </a></li>
-                                    <li><a href="">
-                                            <iron-icon icon="icons:star-border" item-icon></iron-icon>
-                                        </a></li>
-                                    <li><a href="">
-                                            <iron-icon icon="icons:star-border" item-icon></iron-icon>
-                                        </a></li>
-                                    <li><a href="">
-                                            <iron-icon icon="icons:star-border" item-icon></iron-icon>
-                                        </a></li>
-                                    <li><a href="">
-                                            <iron-icon icon="icons:star-border" item-icon></iron-icon>
-                                        </a></li>
+                                <ul class="list-inline rate-group">
+                                    <?php
+                                    for ($i = 1; $i < 6; $i++) {
+                                        ?>
+                                        <li><a href="javascript:void(0)" onclick="setRate(<?php echo $i; ?>)">
+                                                <i class="fa star" aria-hidden="true"></i>
+                                            </a></li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                             <div class="text-center">
@@ -134,7 +132,7 @@ function updateVisit($id)
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <br><br><br>
-                            <img src="assets/images/Nutrition.PNG" alt="">
+                            <img src="assets/images/Nutrition.PNG" class="img-responsive" alt="">
                         </div>
                     </div>
                 </div>
@@ -142,3 +140,9 @@ function updateVisit($id)
         </div>
     </div>
 </div>
+
+<script>
+    function setRate(count) {
+        console.log(count);
+    }
+</script>

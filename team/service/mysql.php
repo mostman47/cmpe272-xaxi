@@ -31,6 +31,12 @@ function searchVisit($productId)
     return selectQuery($query);
 }
 
+function searchVisitBySite($site)
+{
+    $query = 'SELECT * FROM visit WHERE product_id LIKE "' . $site . '%"';
+    return selectQuery($query);
+}
+
 function createVisitObj($productId)
 {
     $query = 'INSERT INTO visit (`product_id`,`count`) VALUES ("' . $productId . '",1)';
@@ -67,7 +73,7 @@ function getAllProduct()
 
 function getAllProductExternal()
 {
-    $external_urls = array(0 => 'http://localhost:8888/cmpe272-xaxi/service/external_products.php');
+    $external_urls = array(0 => 'http://localhost:8888/cmpe272-xaxi/service/external_products.php', 1 => 'http://konstella.me/ExportData.php');
     $products = array();
     foreach ($external_urls as $url) {
 //        print_r($url);

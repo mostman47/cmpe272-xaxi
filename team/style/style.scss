@@ -47,6 +47,7 @@ body {
       width: 100%;
       .card-content {
         overflow: hidden;
+        height: 80px;
       }
       .header {
         height: 200px;
@@ -109,7 +110,7 @@ body {
 }
 
 paper-card {
-  overflow: hidden;
+  //overflow: hidden;
   .tool-bar {
     position: absolute;
     top: 10px;
@@ -138,6 +139,44 @@ paper-button {
 .product-wrapper {
   img {
     height: 300px;
+  }
+}
+
+.rate-group {
+  .star {
+    font-size: 20px;
+    &:before {
+      content: "\f006";
+    }
+    &.active:before {
+      content: "\f005";
+    }
+  }
+  &:hover {
+    li {
+      .star {
+        &:before {
+          content: "\f005";
+        }
+      }
+    }
+  }
+  > li {
+    &:hover {
+      .star {
+        &:before {
+          content: "\f005";
+        }
+      }
+
+      ~ li {
+        .star {
+          &:before {
+            content: "\f006";
+          }
+        }
+      }
+    }
   }
 }
 
