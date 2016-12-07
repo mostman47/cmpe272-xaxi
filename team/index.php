@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="plugins/mindfor.affix.js"></script>
+    <script src="bower_components/mustache.js/mustache.js"></script>
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
@@ -33,6 +34,7 @@
     <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/paper-input/paper-textarea.html">
     <link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
     <link rel="import" href="bower_components/paper-styles/color.html">
     <link rel="import" href="bower_components/paper-fab/paper-fab.html">
@@ -44,7 +46,6 @@
     <link rel="import" href="bower_components/app-layout/app-header/app-header.html">
     <link rel="import" href="bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
     <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
-
 
 
     <link rel="import" href="bower_components/app-layout/demo/sample-content.html">
@@ -154,7 +155,7 @@ if (isset($_GET["page"])) {
                     <paper-item onclick="logout()"><a href="javascript:void(0)">Log out</a></paper-item>
                 </paper-menu>
             </paper-menu-button>
-            <small is-login="true">Hi, <span>Nam</span></small>
+            <small is-login="true">Hi, <span id="userName">Nam</span></small>
         </app-toolbar>
         <app-toolbar class="tall">
             <h1 main-title>Multi-Product</h1>

@@ -24,6 +24,7 @@ function updateVisit($id)
     print_r(mysql_fetch_assoc($visit));
 }
 
+
 ?>
 <div class="container-fluid product-wrapper">
     <div class="row">
@@ -69,7 +70,6 @@ function updateVisit($id)
                                         <paper-button class="blue"
                                                       raised>
                                             <iron-icon icon="icons:add-shopping-cart"></iron-icon>
-                                            &nbsp;
                                             Add to Cart
                                         </paper-button>
                                     </td>
@@ -89,54 +89,168 @@ function updateVisit($id)
             <paper-card class="col-xs-12">
                 <div class="card-content">
                     <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <div class="about-item-complete js-slide-panel-content hide-content display-block-m"><h2
-                                    class="heading-a"> About this item </h2>
-                                <section class="product-about js-about-item">
-                                    <section class="js-legal-badges legal-badges">
-                                        <div class="js-idml-badge idml-badge Grid"></div>
+                        <?php
+                        if (is_null($product['description'])) {
+                            ?>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="about-item-complete js-slide-panel-content hide-content display-block-m"><h2
+                                        class="heading-a"> About this item </h2>
+
+                                    <section class="product-about js-about-item">
+                                        <section class="js-legal-badges legal-badges">
+                                            <div class="js-idml-badge idml-badge Grid"></div>
+                                        </section>
+                                        <div class="js-ellipsis module" data-max-height="350"><p
+                                                class="product-description-disclaimer"><b>Important Made in USA Origin
+                                                    Disclaimer:</b> For certain items sold by Walmart on Walmart.com,
+                                                the
+                                                displayed country of origin
+                                                information may not be accurate or consistent with manufacturer
+                                                information.
+                                                For updated, accurate country of origin data, it is
+                                                recommended that you rely on product packaging or manufacturer
+                                                information.
+                                            </p>
+                                            <p>Relax and soak up the taste of the sun with Sunkist Soda. Sunkist Soda
+                                                beams
+                                                with bold, sweet orange flavor and refreshes the moment you taste it.
+                                                Enjoy
+                                                Sunkist Soda anytime or mix with ice cream for delicious orange floats.
+                                                Gear
+                                                up for good times with the bright taste of Sunkist Soda. SUNKIST is a
+                                                registered trademark of Sunkist Growers, Inc., USA used under license by
+                                                Dr
+                                                Pepper/Seven Up, Inc. 2015 Sunkist Growers, Inc. and Dr Pepper/Seven Up,
+                                                Inc.</p>
+                                            <p></p>
+                                            <li>Bold, tangy orange taste</li>
+                                            <li>Enjoy Sunkist Soda anytime or mix with ice cream for delicious orange
+                                                floats
+                                            </li>
+                                            <p></p>
+                                            <section class="product-about js-ingredients health-about"><h3><strong>Ingredients:&nbsp;</strong>
+                                                </h3>
+                                                <p><b>Ingredients:</b> Carbonated Water, High Fructose Corn Syrup,
+                                                    Citric
+                                                    Acid, Sodium Benzoate (Preservative), Modified Food Starch, Natural
+                                                    Flavors, Caffeine, Ester Gum, Yellow 6, Red 40. </p></section>
+                                        </div>
+                                        <section class="js-legal-badges legal-badges">
+                                            <div class="spacer"></div>
+                                            <div class="js-idml-badge idml-badge Grid"></div>
+                                        </section>
                                     </section>
-                                    <div class="js-ellipsis module" data-max-height="350"><p
-                                            class="product-description-disclaimer"><b>Important Made in USA Origin
-                                                Disclaimer:</b> For certain items sold by Walmart on Walmart.com, the
-                                            displayed country of origin
-                                            information may not be accurate or consistent with manufacturer information.
-                                            For updated, accurate country of origin data, it is
-                                            recommended that you rely on product packaging or manufacturer information.
-                                        </p>
-                                        <p>Relax and soak up the taste of the sun with Sunkist Soda. Sunkist Soda beams
-                                            with bold, sweet orange flavor and refreshes the moment you taste it. Enjoy
-                                            Sunkist Soda anytime or mix with ice cream for delicious orange floats. Gear
-                                            up for good times with the bright taste of Sunkist Soda. SUNKIST is a
-                                            registered trademark of Sunkist Growers, Inc., USA used under license by Dr
-                                            Pepper/Seven Up, Inc. 2015 Sunkist Growers, Inc. and Dr Pepper/Seven Up,
-                                            Inc.</p>
-                                        <p></p>
-                                        <li>Bold, tangy orange taste</li>
-                                        <li>Enjoy Sunkist Soda anytime or mix with ice cream for delicious orange
-                                            floats
-                                        </li>
-                                        <p></p>
-                                        <section class="product-about js-ingredients health-about"><h3><strong>Ingredients:&nbsp;</strong>
-                                            </h3>
-                                            <p><b>Ingredients:</b> Carbonated Water, High Fructose Corn Syrup, Citric
-                                                Acid, Sodium Benzoate (Preservative), Modified Food Starch, Natural
-                                                Flavors, Caffeine, Ester Gum, Yellow 6, Red 40. </p></section>
-                                    </div>
-                                    <section class="js-legal-badges legal-badges">
-                                        <div class="spacer"></div>
-                                        <div class="js-idml-badge idml-badge Grid"></div>
+
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <br><br><br>
+                                <img src="assets/images/Nutrition.PNG" class="img-responsive" style="margin: auto"
+                                     alt="">
+                            </div>
+                        <?php } else {
+                            ?>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="about-item-complete js-slide-panel-content hide-content display-block-m"><h2
+                                        class="heading-a"> About this item </h2>
+                                    <section class="product-about js-about-item">
+                                        <?php echo $product['description']; ?>
                                     </section>
-                                </section>
+                                </div>
+                            </div>
+
+                        <?php } ?>
+                    </div>
+                </div>
+            </paper-card>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12">
+            <paper-card class="col-xs-12" heading="Add new comment" alt="Add new comment">
+                <div class="tool-bar" is-login="false">
+                    <ul class="list-inline">
+                        <li>Login before make a comment</li>
+                        <li>
+                            <paper-button class="green"
+                                          style="padding: 15px 15px 15px 5px;height: 50px;" raised
+                                          onclick="loginModal.open();">
+                                <paper-icon-button icon="icons:account-circle"></paper-icon-button>
+                                Login
+                            </paper-button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-content" is-login="true">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="text-center">
+                                <ul class="list-inline rate-group">
+                                    <?php
+                                    for ($i = 1; $i < 6; $i++) {
+                                        ?>
+                                        <li><a href="javascript:void(0)" onclick="setRate(<?php echo $i; ?>)">
+                                                <i class="fa star" aria-hidden="true"></i>
+                                            </a></li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                            <div>
+                                <paper-textarea id="reviewTextarea" label="Enter text"></paper-textarea>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-6">
-                            <br><br><br>
-                            <img src="assets/images/Nutrition.PNG" class="img-responsive" alt="">
+                        <div class="col-xs-12">
+                            <paper-button class="pull-right blue"
+                                          onclick="createReview('<?php echo $product['id'] ?>')"
+                                          raised>
+                                Submit
+                            </paper-button>
                         </div>
                     </div>
                 </div>
             </paper-card>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12 review-group">
+            <?php
+            $visits = searchReviewByProduct($product['id']);
+            while ($visit = mysql_fetch_assoc($visits)) {
+//                print_r($visit);
+                $user = mysql_fetch_assoc(searchUserById($visit['user_id']));
+//                print_r($user);
+                ?>
+
+                <paper-card class="col-xs-6" heading="by <?php echo $user['username']; ?>"
+                            alt="by <?php echo $user['username']; ?>">
+                    <div class="tool-bar">
+                        <br>
+                        <ul class="list-inline rate-group">
+                            <?php
+                            for ($i = 1; $i < $visit['rate'] + 1; $i++) {
+                                ?>
+                                <li><a href="javascript:void(0)" onclick="setRate(<?php echo $i; ?>)">
+                                        <i class="fa star active" aria-hidden="true"></i>
+                                    </a></li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div>
+                                    <?php print_r($visit['text']); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </paper-card>
+
+                <?php
+            }
+            ?>
         </div>
     </div>
 </div>
@@ -145,4 +259,23 @@ function updateVisit($id)
     function setRate(count) {
         console.log(count);
     }
+
+    function urlCreateReview(data) {
+        console.log(data);
+        return $.post("service/create_review.php", data).then(function (rs1) {
+            console.log(rs1);
+            return JSON.parse(rs1);
+        });
+    }
+
+    function createReview(prod_id) {
+        console.log(prod_id);
+        urlCreateReview({
+            text: $("#reviewTextarea").val(),
+            prod_id: prod_id,
+            user_id: loginJson.id,
+            rate: 1
+        });
+    }
+
 </script>

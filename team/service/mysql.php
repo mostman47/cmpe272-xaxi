@@ -16,10 +16,19 @@ function getAllUser()
 
 }
 
-function getAllVisit()
+function searchUserById($id)
+{
+    $query = 'SELECT * FROM users WHERE id = ' . $id;
+    return selectQuery($query);
+}
+
+function getAllVisit($limit)
 {
 
     $query = 'SELECT * FROM visit';
+    if (isset($limit)) {
+        $query = $query . ' order by count DESC LIMIT ' . $limit;
+    }
 
     return selectQuery($query);
 
@@ -34,6 +43,25 @@ function searchVisit($productId)
 function searchVisitBySite($site)
 {
     $query = 'SELECT * FROM visit WHERE product_id LIKE "' . $site . '%"';
+    return selectQuery($query);
+}
+
+function searchReviewByUser($id)
+{
+    $query = 'SELECT * FROM review WHERE user_id = ' . $id;
+    return selectQuery($query);
+}
+
+function searchReviewByProduct($id)
+{
+    $query = 'SELECT * FROM review WHERE prod_id = "' . $id . '"';
+    return selectQuery($query);
+}
+
+function createReview($user_id, $prod_id, $text, $rate)
+{
+    $query = 'INSERT INTO review (`user_id`,`prod_id`,`text`,`rate`) VALUES (' . $user_id . ',"' . $prod_id . '","' . $text . '",' . $rate . ')';
+//    print_r($query);
     return selectQuery($query);
 }
 
