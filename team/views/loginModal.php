@@ -54,12 +54,13 @@
             console.log(event.detail.response);
             loginEvent = event;
             if (event.detail.response) {
-//                document.getElementById('login-status').innerHTML = event.detail.response.status;
-//                document.getElementById('login-message').innerHTML = event.detail.response.message;
-//                innerDialog.open();
                 if (event.detail.response.status) {
                     window.localStorage.setItem('loginUser', JSON.stringify(event.detail.response));
                     window.location.reload();
+                }else{
+                    document.getElementById('login-status').innerHTML = event.detail.response.status;
+                    document.getElementById('login-message').innerHTML = event.detail.response.message;
+                    innerDialog.open();
                 }
             } else {
                 document.getElementById('login-status').innerHTML = "Error";

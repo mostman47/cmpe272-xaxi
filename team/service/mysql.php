@@ -117,7 +117,7 @@ function getAllProduct()
 
 }
 
-function getAllProductExternal()
+function getAllProductExternal($name)
 {
     $external_urls = array(0 => 'http://myxaxi.net/service/external_products.php', 1 => 'http://konstella.me/ExportData.php');
     $products = array();
@@ -136,8 +136,17 @@ function getAllProductExternal()
         $output = json_decode($output, true);
         $products = array_merge($products, $output);
     }
-//    print_r($product);
-    return $products;
+    $array = array();
+    if (isset($name)) {
+        foreach ($products as $rows) {
+            if (strpos($rows['name'], $name) !== false) {
+                array_push($array, $rows);
+            }
+        }
+    } else {
+        $array = $products;
+    }
+    return $array;
 }
 
 function getProductById($id)

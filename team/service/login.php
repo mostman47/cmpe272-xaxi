@@ -19,7 +19,7 @@ function login()
         $rt['password'] = null;
         print_r(json_encode($rt));
     } else {
-        print_r('{"status": false,"message":"username is not existed"}');
+        print_r('{"status": false,"message":"username is not existed or password is incorrect"}');
     }
 
 }
