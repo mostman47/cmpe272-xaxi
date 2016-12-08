@@ -34,6 +34,12 @@ function getAllVisit($limit)
 
 }
 
+function getRateAVGBySite($site)
+{
+    $query = 'SELECT product_id, avg(rate) FROM review WHERE product_id LIKE "' . $site . '%"  GROUP BY product_id';
+    return selectQuery($query);
+}
+
 function searchVisit($productId)
 {
     $query = 'SELECT * FROM visit WHERE product_id = "' . $productId . '"';
@@ -54,13 +60,13 @@ function searchReviewByUser($id)
 
 function searchReviewByProduct($id)
 {
-    $query = 'SELECT * FROM review WHERE prod_id = "' . $id . '"';
+    $query = 'SELECT * FROM review WHERE product_id = "' . $id . '"';
     return selectQuery($query);
 }
 
-function createReview($user_id, $prod_id, $text, $rate)
+function createReview($user_id, $product_id, $text, $rate, $date_time)
 {
-    $query = 'INSERT INTO review (`user_id`,`prod_id`,`text`,`rate`) VALUES (' . $user_id . ',"' . $prod_id . '","' . $text . '",' . $rate . ')';
+    $query = 'INSERT INTO review (`user_id`,`product_id`,`text`,`rate`,`date_time`) VALUES (' . $user_id . ',"' . $product_id . '","' . $text . '",' . $rate . ',"' . $date_time . '")';
 //    print_r($query);
     return selectQuery($query);
 }

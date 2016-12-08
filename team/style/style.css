@@ -107,4 +107,7 @@ paper-button paper-spinner {
 .rate-group > li:hover ~ li .star:before {
   content: "\f006"; }
 
+.review-group paper-card {
+  margin-bottom: 10px; }
+
 /*# sourceMappingURL=style.css.map */

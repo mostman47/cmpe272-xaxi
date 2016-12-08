@@ -48,8 +48,8 @@ function updateVisit($id)
                                     <?php
                                     for ($i = 1; $i < 6; $i++) {
                                         ?>
-                                        <li><a href="javascript:void(0)" onclick="setRate(<?php echo $i; ?>)">
-                                                <i class="fa star" aria-hidden="true"></i>
+                                        <li><a href="javascript:void(0)"
+                                            <i class="fa star" aria-hidden="true"></i>
                                             </a></li>
                                     <?php } ?>
                                 </ul>
@@ -186,7 +186,7 @@ function updateVisit($id)
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="text-center">
-                                <ul class="list-inline rate-group">
+                                <ul class="list-inline rate-group editable">
                                     <?php
                                     for ($i = 1; $i < 6; $i++) {
                                         ?>
@@ -213,17 +213,17 @@ function updateVisit($id)
         </div>
     </div>
     <br>
-    <div class="row">
-        <div class="col-xs-12 review-group">
-            <?php
-            $visits = searchReviewByProduct($product['id']);
-            while ($visit = mysql_fetch_assoc($visits)) {
+    <div class="row review-group">
+        <?php
+        $visits = searchReviewByProduct($product['id']);
+        while ($visit = mysql_fetch_assoc($visits)) {
 //                print_r($visit);
-                $user = mysql_fetch_assoc(searchUserById($visit['user_id']));
+            $user = mysql_fetch_assoc(searchUserById($visit['user_id']));
 //                print_r($user);
-                ?>
+            ?>
 
-                <paper-card class="col-xs-6" heading="by <?php echo $user['username']; ?>"
+            <div class="col-xs-6">
+                <paper-card class="col-xs-12" heading="by <?php echo $user['username']; ?>"
                             alt="by <?php echo $user['username']; ?>">
                     <div class="tool-bar">
                         <br>
@@ -240,24 +240,35 @@ function updateVisit($id)
                     <div class="card-content">
                         <div class="row">
                             <div class="col-xs-12">
-                                <div>
+                                <p>
                                     <?php print_r($visit['text']); ?>
-                                </div>
+                                </p>
+                                <small class=""><?php print_r($visit['date_time']); ?></small>
                             </div>
                         </div>
                     </div>
                 </paper-card>
+            </div>
 
-                <?php
-            }
-            ?>
-        </div>
+            <?php
+        }
+        ?>
     </div>
 </div>
 
 <script>
+    var rateCount = 0;
     function setRate(count) {
-        console.log(count);
+        rateCount = count;
+        console.log($(".rate-group.editable"));
+        for (var i = 0; i < $(".rate-group.editable > li").length; i++) {
+            if (i < count) {
+                $(".rate-group.editable > li .star").eq(i).addClass("active");
+            } else {
+                $(".rate-group.editable > li .star").eq(i).removeClass("active");
+            }
+
+        }
     }
 
     function urlCreateReview(data) {
@@ -272,9 +283,12 @@ function updateVisit($id)
         console.log(prod_id);
         urlCreateReview({
             text: $("#reviewTextarea").val(),
-            prod_id: prod_id,
+            product_id: prod_id,
             user_id: loginJson.id,
-            rate: 1
+            rate: rateCount,
+            date_time: new Date().toLocaleString()
+        }).then(function () {
+            window.location.reload();
         });
     }
 

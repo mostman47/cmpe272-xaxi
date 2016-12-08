@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d999a06-9a2b-4ce2-8fd5-6eaf53d03698" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/create_review.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/get_review.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/export_review.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/main.js" afterPath="$PROJECT_DIR$/script/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/export_visit.php" afterPath="$PROJECT_DIR$/service/export_visit.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/create_review.php" afterPath="$PROJECT_DIR$/service/create_review.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/mysql.php" afterPath="$PROJECT_DIR$/service/mysql.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/style.css" afterPath="$PROJECT_DIR$/style/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/style.css.map" afterPath="$PROJECT_DIR$/style/style.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/style.scss" afterPath="$PROJECT_DIR$/style/style.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/product.item.php" afterPath="$PROJECT_DIR$/views/product.item.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/topFive.php" afterPath="$PROJECT_DIR$/views/topFive.php" />
     </list>
     <ignored path="team.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,41 +30,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="mysql.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mysql.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/mysql.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+            <state relative-caret-position="241">
+              <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
               <folding>
-                <marker date="1481107325013" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
-                <marker date="1481107325013" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
-                <marker date="1481107325013" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
-                <marker date="1481107325013" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
-                <marker date="1481107325013" expanded="true" signature="639:698" ph="SELECT * FRO... visit" />
-                <marker date="1481107325013" expanded="true" signature="786:844" ph="SELECT * FRO... visit" />
-                <marker date="1481107325013" expanded="true" signature="931:967" ph="SELECT * FRO... review" />
-                <marker date="1481107325013" expanded="true" signature="931:968" ph="SELECT * FRO... visit" />
-                <marker date="1481107325013" expanded="true" signature="1064:1102" ph="SELECT * FRO... review" />
-                <marker date="1481107325013" expanded="true" signature="1064:1114" ph="SELECT * FRO... review" />
-                <marker date="1481107325013" expanded="true" signature="1064:1115" ph="SELECT * FRO... review" />
-                <marker date="1481107325013" expanded="true" signature="1224:1287" ph="INSERT INTO review... " />
-                <marker date="1481107325013" expanded="true" signature="1224:1299" ph="INSERT INTO review... " />
-                <marker date="1481107325013" expanded="true" signature="1224:1304" ph="INSERT INTO review... " />
-                <marker date="1481107325013" expanded="true" signature="1224:1305" ph="INSERT INTO review... " />
-                <marker date="1481107325013" expanded="true" signature="1224:1317" ph="INSERT INTO review... " />
-                <marker date="1481107325013" expanded="true" signature="1224:1323" ph="INSERT INTO review... " />
-                <marker date="1481107325013" expanded="true" signature="1224:1324" ph="INSERT INTO review... " />
-                <marker date="1481107325013" expanded="true" signature="1224:1333" ph="INSERT INTO review... " />
-                <marker date="1481107325013" expanded="true" signature="1224:1339" ph="INSERT INTO review... " />
-                <marker date="1481107325013" expanded="true" signature="1224:1348" ph="INSERT INTO review... " />
-                <marker date="1481107325013" expanded="true" signature="1224:1353" ph="INSERT INTO review... " />
-                <marker date="1481107325013" expanded="true" signature="1466:1538" ph="INSERT INTO visit... " />
-                <marker date="1481107325013" expanded="true" signature="1673:1754" ph="UPDATE visit... " />
-                <marker date="1481107325013" expanded="true" signature="2118:2140" ph="SELECT * FRO... products" />
-                <marker date="1481107325013" expanded="true" signature="2916:2950" ph="SELECT * FRO... products" />
-                <marker date="1481107325013" expanded="true" signature="3084:3135" ph="SELECT * FRO... products" />
-                <marker date="1481107325013" expanded="true" signature="3226:3251" ph="SELECT * FRO... users" />
+                <marker date="1481152263444" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
+                <marker date="1481152263444" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
+                <marker date="1481152263444" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
+                <marker date="1481152263444" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
+                <marker date="1481152263444" expanded="true" signature="639:718" ph="SELECT prod_... review" />
+                <marker date="1481152263444" expanded="true" signature="639:739" ph="SELECT produ... review" />
+                <marker date="1481152263444" expanded="true" signature="645:718" ph="select prod_... review" />
+                <marker date="1481152263444" expanded="true" signature="826:885" ph="SELECT * FRO... visit" />
+                <marker date="1481152263444" expanded="true" signature="973:1031" ph="SELECT * FRO... visit" />
+                <marker date="1481152263444" expanded="true" signature="1118:1154" ph="SELECT * FRO... review" />
+                <marker date="1481152263444" expanded="true" signature="1118:1155" ph="SELECT * FRO... visit" />
+                <marker date="1481152263444" expanded="true" signature="1251:1292" ph="SELECT * FRO... review" />
+                <marker date="1481152263444" expanded="true" signature="1251:1304" ph="SELECT * FRO... review" />
+                <marker date="1481152263444" expanded="true" signature="1251:1305" ph="SELECT * FRO... review" />
+                <marker date="1481152263444" expanded="true" signature="1429:1507" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1429:1519" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1429:1524" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1429:1525" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1429:1540" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1429:1546" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1429:1547" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1429:1556" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1429:1562" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1429:1571" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1429:1577" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1429:1597" ph="INSERT INTO review... " />
+                <marker date="1481152263444" expanded="true" signature="1710:1782" ph="INSERT INTO visit... " />
+                <marker date="1481152263444" expanded="true" signature="1917:1998" ph="UPDATE visit... " />
+                <marker date="1481152263444" expanded="true" signature="2362:2384" ph="SELECT * FRO... products" />
+                <marker date="1481152263444" expanded="true" signature="3160:3194" ph="SELECT * FRO... products" />
+                <marker date="1481152263444" expanded="true" signature="3328:3379" ph="SELECT * FRO... products" />
+                <marker date="1481152263444" expanded="true" signature="3470:3495" ph="SELECT * FRO... users" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="product.item.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/product.item.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="242" column="0" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -76,57 +87,7 @@
         <entry file="file://$PROJECT_DIR$/service/create_review.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="63">
-              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/product.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="41" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="get_review.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/get_review.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="72" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="242" column="46" selection-start-line="242" selection-start-column="20" selection-end-line="242" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="product.item.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/product.item.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="263" column="26" selection-start-line="263" selection-start-column="26" selection-end-line="263" selection-end-column="26" />
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -148,15 +109,16 @@
         <option value="$PROJECT_DIR$/views/loginModal.php" />
         <option value="$PROJECT_DIR$/views/product.php" />
         <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/style/style.scss" />
         <option value="$PROJECT_DIR$/service/export_visit.php" />
         <option value="$PROJECT_DIR$/views/topFive.php" />
         <option value="$PROJECT_DIR$/script/main.js" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/service/get_review.php" />
-        <option value="$PROJECT_DIR$/views/product.item.php" />
+        <option value="$PROJECT_DIR$/service/export_review.php" />
+        <option value="$PROJECT_DIR$/style/style.scss" />
         <option value="$PROJECT_DIR$/service/create_review.php" />
         <option value="$PROJECT_DIR$/service/mysql.php" />
+        <option value="$PROJECT_DIR$/views/product.item.php" />
       </list>
     </option>
   </component>
@@ -198,6 +160,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -274,9 +239,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,6 +249,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\cmpe272-xaxi\team\service" />
       <recent name="C:\MAMP\htdocs\cmpe272-xaxi\team\plugins" />
       <recent name="C:\MAMP\htdocs\cmpe272-xaxi\team\views" />
       <recent name="C:\MAMP\htdocs\cmpe272-xaxi\team\assets\images" />
@@ -607,12 +570,13 @@
       <workItem from="1480889948575" duration="15000" />
       <workItem from="1480889982101" duration="94000" />
       <workItem from="1481075231236" duration="7621000" />
-      <workItem from="1481094126042" duration="10200000" />
+      <workItem from="1481094126042" duration="10244000" />
+      <workItem from="1481149216261" duration="3295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44524000" />
+    <option name="totallyTimeSpent" value="47863000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -634,9 +598,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2800441" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28335172" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.211838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2834891" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -664,14 +628,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/service/export_visit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/authentication.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -685,34 +641,38 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1481107325013" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
-            <marker date="1481107325013" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
-            <marker date="1481107325013" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="639:698" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="786:844" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="931:967" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="931:968" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="1064:1102" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1064:1114" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1064:1115" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1224:1287" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1299" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1304" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1305" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1317" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1323" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1324" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1333" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1339" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1348" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1353" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1466:1538" ph="INSERT INTO visit... " />
-            <marker date="1481107325013" expanded="true" signature="1673:1754" ph="UPDATE visit... " />
-            <marker date="1481107325013" expanded="true" signature="2118:2140" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="2916:2950" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="3084:3135" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="3226:3251" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="639:718" ph="SELECT prod_... review" />
+            <marker date="1481152263444" expanded="true" signature="639:739" ph="SELECT produ... review" />
+            <marker date="1481152263444" expanded="true" signature="645:718" ph="select prod_... review" />
+            <marker date="1481152263444" expanded="true" signature="826:885" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="973:1031" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="1118:1154" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1118:1155" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="1251:1292" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1251:1304" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1251:1305" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1429:1507" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1519" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1524" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1525" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1540" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1546" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1547" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1556" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1562" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1571" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1577" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1597" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1710:1782" ph="INSERT INTO visit... " />
+            <marker date="1481152263444" expanded="true" signature="1917:1998" ph="UPDATE visit... " />
+            <marker date="1481152263444" expanded="true" signature="2362:2384" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3160:3194" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3328:3379" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3470:3495" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -747,34 +707,38 @@
         <state relative-caret-position="1701">
           <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding>
-            <marker date="1481107325013" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
-            <marker date="1481107325013" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
-            <marker date="1481107325013" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="639:698" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="786:844" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="931:967" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="931:968" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="1064:1102" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1064:1114" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1064:1115" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1224:1287" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1299" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1304" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1305" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1317" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1323" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1324" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1333" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1339" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1348" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1353" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1466:1538" ph="INSERT INTO visit... " />
-            <marker date="1481107325013" expanded="true" signature="1673:1754" ph="UPDATE visit... " />
-            <marker date="1481107325013" expanded="true" signature="2118:2140" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="2916:2950" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="3084:3135" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="3226:3251" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="639:718" ph="SELECT prod_... review" />
+            <marker date="1481152263444" expanded="true" signature="639:739" ph="SELECT produ... review" />
+            <marker date="1481152263444" expanded="true" signature="645:718" ph="select prod_... review" />
+            <marker date="1481152263444" expanded="true" signature="826:885" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="973:1031" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="1118:1154" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1118:1155" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="1251:1292" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1251:1304" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1251:1305" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1429:1507" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1519" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1524" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1525" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1540" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1546" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1547" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1556" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1562" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1571" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1577" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1597" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1710:1782" ph="INSERT INTO visit... " />
+            <marker date="1481152263444" expanded="true" signature="1917:1998" ph="UPDATE visit... " />
+            <marker date="1481152263444" expanded="true" signature="2362:2384" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3160:3194" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3328:3379" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3470:3495" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -808,34 +772,38 @@
         <state relative-caret-position="1701">
           <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding>
-            <marker date="1481107325013" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
-            <marker date="1481107325013" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
-            <marker date="1481107325013" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="639:698" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="786:844" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="931:967" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="931:968" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="1064:1102" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1064:1114" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1064:1115" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1224:1287" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1299" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1304" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1305" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1317" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1323" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1324" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1333" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1339" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1348" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1353" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1466:1538" ph="INSERT INTO visit... " />
-            <marker date="1481107325013" expanded="true" signature="1673:1754" ph="UPDATE visit... " />
-            <marker date="1481107325013" expanded="true" signature="2118:2140" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="2916:2950" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="3084:3135" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="3226:3251" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="639:718" ph="SELECT prod_... review" />
+            <marker date="1481152263444" expanded="true" signature="639:739" ph="SELECT produ... review" />
+            <marker date="1481152263444" expanded="true" signature="645:718" ph="select prod_... review" />
+            <marker date="1481152263444" expanded="true" signature="826:885" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="973:1031" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="1118:1154" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1118:1155" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="1251:1292" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1251:1304" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1251:1305" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1429:1507" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1519" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1524" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1525" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1540" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1546" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1547" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1556" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1562" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1571" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1577" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1597" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1710:1782" ph="INSERT INTO visit... " />
+            <marker date="1481152263444" expanded="true" signature="1917:1998" ph="UPDATE visit... " />
+            <marker date="1481152263444" expanded="true" signature="2362:2384" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3160:3194" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3328:3379" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3470:3495" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -893,34 +861,38 @@
         <state relative-caret-position="21">
           <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
           <folding>
-            <marker date="1481107325013" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
-            <marker date="1481107325013" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
-            <marker date="1481107325013" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="639:698" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="786:844" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="931:967" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="931:968" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="1064:1102" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1064:1114" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1064:1115" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1224:1287" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1299" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1304" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1305" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1317" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1323" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1324" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1333" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1339" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1348" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1353" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1466:1538" ph="INSERT INTO visit... " />
-            <marker date="1481107325013" expanded="true" signature="1673:1754" ph="UPDATE visit... " />
-            <marker date="1481107325013" expanded="true" signature="2118:2140" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="2916:2950" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="3084:3135" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="3226:3251" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="639:718" ph="SELECT prod_... review" />
+            <marker date="1481152263444" expanded="true" signature="639:739" ph="SELECT produ... review" />
+            <marker date="1481152263444" expanded="true" signature="645:718" ph="select prod_... review" />
+            <marker date="1481152263444" expanded="true" signature="826:885" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="973:1031" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="1118:1154" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1118:1155" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="1251:1292" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1251:1304" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1251:1305" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1429:1507" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1519" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1524" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1525" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1540" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1546" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1547" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1556" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1562" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1571" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1577" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1597" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1710:1782" ph="INSERT INTO visit... " />
+            <marker date="1481152263444" expanded="true" signature="1917:1998" ph="UPDATE visit... " />
+            <marker date="1481152263444" expanded="true" signature="2362:2384" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3160:3194" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3328:3379" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3470:3495" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
@@ -1036,30 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/style/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="49" column="21" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/external_users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/service/export_visit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/service/authentication.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
@@ -1088,7 +1036,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
+        <state relative-caret-position="5082">
           <caret line="242" column="46" selection-start-line="242" selection-start-column="20" selection-end-line="242" selection-end-column="46" />
           <folding />
         </state>
@@ -1102,14 +1050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/service/get_review.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="72" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/script/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -1118,10 +1058,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/product.item.php">
+    <entry file="file://$PROJECT_DIR$/service/export_visit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="263" column="26" selection-start-line="263" selection-start-column="26" selection-end-line="263" selection-end-column="26" />
+        <state relative-caret-position="42">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/get_review.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/export_review.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="183" column="13" selection-start-line="183" selection-start-column="13" selection-end-line="183" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/external_users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -1129,45 +1101,57 @@
     <entry file="file://$PROJECT_DIR$/service/create_review.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service/mysql.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+        <state relative-caret-position="241">
+          <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
           <folding>
-            <marker date="1481107325013" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
-            <marker date="1481107325013" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
-            <marker date="1481107325013" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="639:698" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="786:844" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="931:967" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="931:968" ph="SELECT * FRO... visit" />
-            <marker date="1481107325013" expanded="true" signature="1064:1102" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1064:1114" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1064:1115" ph="SELECT * FRO... review" />
-            <marker date="1481107325013" expanded="true" signature="1224:1287" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1299" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1304" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1305" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1317" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1323" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1324" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1333" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1339" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1348" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1224:1353" ph="INSERT INTO review... " />
-            <marker date="1481107325013" expanded="true" signature="1466:1538" ph="INSERT INTO visit... " />
-            <marker date="1481107325013" expanded="true" signature="1673:1754" ph="UPDATE visit... " />
-            <marker date="1481107325013" expanded="true" signature="2118:2140" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="2916:2950" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="3084:3135" ph="SELECT * FRO... products" />
-            <marker date="1481107325013" expanded="true" signature="3226:3251" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="192:228" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="313:344" ph="SELECT * FRO... users" />
+            <marker date="1481152263444" expanded="true" signature="313:351" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="434:453" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="639:718" ph="SELECT prod_... review" />
+            <marker date="1481152263444" expanded="true" signature="639:739" ph="SELECT produ... review" />
+            <marker date="1481152263444" expanded="true" signature="645:718" ph="select prod_... review" />
+            <marker date="1481152263444" expanded="true" signature="826:885" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="973:1031" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="1118:1154" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1118:1155" ph="SELECT * FRO... visit" />
+            <marker date="1481152263444" expanded="true" signature="1251:1292" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1251:1304" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1251:1305" ph="SELECT * FRO... review" />
+            <marker date="1481152263444" expanded="true" signature="1429:1507" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1519" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1524" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1525" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1540" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1546" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1547" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1556" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1562" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1571" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1577" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1429:1597" ph="INSERT INTO review... " />
+            <marker date="1481152263444" expanded="true" signature="1710:1782" ph="INSERT INTO visit... " />
+            <marker date="1481152263444" expanded="true" signature="1917:1998" ph="UPDATE visit... " />
+            <marker date="1481152263444" expanded="true" signature="2362:2384" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3160:3194" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3328:3379" ph="SELECT * FRO... products" />
+            <marker date="1481152263444" expanded="true" signature="3470:3495" ph="SELECT * FRO... users" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/product.item.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="242" column="0" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
