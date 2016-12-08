@@ -65,7 +65,7 @@
                 document.getElementById('login-message').innerHTML = event.detail.response.message;
                 innerDialog.open();
                 if (event.detail.response.status) {
-                    renderUserList(event.detail.res ponse.users);
+                    renderUserList(event.detail.response.users);
                 }
             } else {
                 document.getElementById('login-status').innerHTML = "Error";

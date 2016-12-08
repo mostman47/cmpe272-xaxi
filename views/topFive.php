@@ -1,38 +1,59 @@
+<?php
+$ch = curl_init();
+
+curl_setopt_array($ch, array(
+    CURLOPT_URL => 'http://myxaxi.net/team/service/export_visit.php?site=xaxi',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST => true,
+    CURLOPT_FOLLOWLOCATION => true
+));
+
+$visits = curl_exec($ch);
+$visits = json_decode($visits);
+
+curl_setopt_array($ch, array(
+    CURLOPT_URL => 'http://myxaxi.net/team/service/export_review.php?site=xaxi',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST => true,
+    CURLOPT_FOLLOWLOCATION => true
+));
+
+$reviews = curl_exec($ch);
+$reviews = json_decode($reviews);
+?>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12">
             <paper-card class="col-xs-12" heading="Top Five Visited Products" alt="Top Five Visited Products">
-                <!--                <div class="tool-bar">-->
-                <!--                    <paper-button id="createUserModalButton" class="pull-right blue" onclick="createUserModal.open();"-->
-                <!--                                  raised>-->
-                <!--                        <iron-icon icon="icons:add"></iron-icon>-->
-                <!--                        Add User-->
-                <!--                    </paper-button>-->
-                <!--<paper-dropdown-menu label="Filter by" id="searchBy">
-                    <paper-listbox class="dropdown-content" selected="0">
-                        <paper-item>Top five most visited</paper-item>
-                        <paper-item>Top five best review</paper-item>
-                    </paper-listbox>
-                </paper-dropdown-menu>-->
-                <!--                </div>-->
-
             </paper-card>
         </div>
     </div>
     <div class="row item-list">
         <?php
         $array = array();
-        $products = getAllProductExternal();
+        $arrayVisit = array();
+        $products = getAllProduct();
 
-        $visits = getAllVisit(5);
-        while ($visit = mysql_fetch_assoc($visits)) {
-            foreach ($products as $product) {
+
+        foreach ($visits as $visit) {
+            $arr = array();
+            foreach ($visit as $key => $value) {
+                $arr[$key] = $value;
+            }
+            array_push($arrayVisit, $arr);
+        }
+
+        while ($product = mysql_fetch_assoc($products)) {
+            foreach ($arrayVisit as $visit) {
                 if ($product['id'] == $visit['product_id']) {
                     $product['count'] = $visit['count'];
                     array_push($array, $product);
                 }
             }
         }
+
+        //        print_r($array);
 
         ?>
         <?php
@@ -42,7 +63,7 @@
 
                 <a href="./?page=product-item&id=<?php echo $product['id']; ?>">
 
-                    <paper-card image="<?php echo $product['image']; ?>" class="small">
+                    <paper-card image="assets/images/soda/<?php echo $product['image']; ?>" class="small">
                         <div class="pull-left">
                             <paper-badge label="<?php
                             echo $product['count'];
@@ -70,7 +91,6 @@
         ?>
 
     </div>
-
     <div class="row">
         <div class="col-xs-12">
             <paper-card class="col-xs-12" heading="Top Five Rated Products" alt="Top Five Rated Products">
@@ -79,19 +99,28 @@
     </div>
     <div class="row item-list">
         <?php
-        $array = array();
-        $products = getAllProductExternal();
 
-        $visits = getRateAVGLimit(5);
-        while ($visit = mysql_fetch_assoc($visits)) {
-            foreach ($products as $product) {
+        $array = array();
+        $arrayVisit = array();
+        $products = getAllProduct();
+
+
+        foreach ($reviews as $visit) {
+            $arr = array();
+            foreach ($visit as $key => $value) {
+                $arr[$key] = $value;
+            }
+            array_push($arrayVisit, $arr);
+        }
+
+        while ($product = mysql_fetch_assoc($products)) {
+            foreach ($arrayVisit as $visit) {
                 if ($product['id'] == $visit['product_id']) {
                     $product['avg(rate)'] = $visit['avg(rate)'];
                     array_push($array, $product);
                 }
             }
         }
-
         ?>
         <?php
         foreach ($array as $product) {
@@ -100,7 +129,7 @@
 
                 <a href="./?page=product-item&id=<?php echo $product['id']; ?>">
 
-                    <paper-card image="<?php echo $product['image']; ?>" class="small">
+                    <paper-card image="assets/images/soda/<?php echo $product['image']; ?>" class="small">
                         <div class="text-center" style="
     position: absolute;
     width: 100%;

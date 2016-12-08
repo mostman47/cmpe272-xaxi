@@ -114,7 +114,43 @@ paper-button {
     height: 300px;
   }
 }
+.rate-group {
+  .star {
+    font-size: 20px;
+    &:before {
+      content: "\f006";
+    }
+    &.active:before {
+      content: "\f005";
+    }
+  }
+  &:hover {
+    li {
+      .star {
+        &:before {
+          content: "\f005";
+        }
+      }
+    }
+  }
+  > li {
+    &:hover {
+      .star {
+        &:before {
+          content: "\f005";
+        }
+      }
 
+      ~ li {
+        .star {
+          &:before {
+            content: "\f006";
+          }
+        }
+      }
+    }
+  }
+}
 //
 //#Affix1 {
 //  overflow: initial !important;

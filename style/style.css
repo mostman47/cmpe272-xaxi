@@ -77,4 +77,17 @@ paper-button paper-spinner {
 .product-wrapper img {
   height: 300px; }
 
+.rate-group .star {
+  font-size: 20px; }
+  .rate-group .star:before {
+    content: "\f006"; }
+  .rate-group .star.active:before {
+    content: "\f005"; }
+.rate-group:hover li .star:before {
+  content: "\f005"; }
+.rate-group > li:hover .star:before {
+  content: "\f005"; }
+.rate-group > li:hover ~ li .star:before {
+  content: "\f006"; }
+
 /*# sourceMappingURL=style.css.map */

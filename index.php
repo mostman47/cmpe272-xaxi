@@ -8,7 +8,7 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="import" href="bower_components/polymer/polymer.html">
 
     <link rel="import" href="bower_components/iron-iconset-svg/iron-iconset-svg.html">
@@ -243,6 +243,19 @@ if (isset($_GET["page"])) {
                         <paper-ripple></paper-ripple>
                     </paper-icon-item>
                 </a>
+                <a href="./?page=topFive">
+                    <paper-icon-item
+                        class="<?php
+                        if ($page === "topFive") {
+                            echo "iron-selected";
+                        }
+                        ?>"
+                    >
+                        <iron-icon icon="icons:stars" item-icon></iron-icon>
+                        <span>Top Five</span>
+                        <paper-ripple></paper-ripple>
+                    </paper-icon-item>
+                </a>
                 <!--                <a href="javascript:void(0)" onclick="">-->
                 <!--                    <paper-icon-item>-->
                 <!--                        <iron-icon icon="remove-circle" item-icon></iron-icon>-->
@@ -290,6 +303,9 @@ if (isset($_GET["page"])) {
                     break;
                 case 'other_users':
                     include 'views/other_users.php';
+                    break;
+                case 'topFive':
+                    include 'views/topFive.php';
                     break;
             }
         } else {

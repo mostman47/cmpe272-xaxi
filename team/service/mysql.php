@@ -36,7 +36,19 @@ function getAllVisit($limit)
 
 function getRateAVGBySite($site)
 {
-    $query = 'SELECT product_id, avg(rate) FROM review WHERE product_id LIKE "' . $site . '%"  GROUP BY product_id';
+    $query = 'SELECT product_id, avg(rate) FROM review WHERE product_id LIKE "' . $site . '%"  GROUP BY product_id order by avg(rate) DESC LIMIT 5';
+    return selectQuery($query);
+}
+
+function getRateAVG($product_id)
+{
+    $query = 'SELECT product_id, avg(rate),count(rate) FROM review WHERE product_id = "' . $product_id . '" GROUP BY product_id';
+    return selectQuery($query);
+}
+
+function getRateAVGLimit($limit)
+{
+    $query = 'SELECT product_id, avg(rate),count(rate) FROM review GROUP BY product_id order by avg(rate) DESC LIMIT ' . $limit;
     return selectQuery($query);
 }
 
@@ -48,7 +60,7 @@ function searchVisit($productId)
 
 function searchVisitBySite($site)
 {
-    $query = 'SELECT * FROM visit WHERE product_id LIKE "' . $site . '%"';
+    $query = 'SELECT * FROM visit WHERE product_id LIKE "' . $site . '%" order by count DESC LIMIT 5';
     return selectQuery($query);
 }
 

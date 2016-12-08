@@ -152,7 +152,7 @@ if (isset($_GET["page"])) {
             <paper-menu-button is-login="true">
                 <paper-icon-button icon="icons:account-circle" class="dropdown-trigger"></paper-icon-button>
                 <paper-menu class="dropdown-content">
-                    <paper-item onclick="logout()"><a href="javascript:void(0)">Log out</a></paper-item>
+                    <paper-item onclick="logout()"><a href="javascript:void(0)">Logout</a></paper-item>
                 </paper-menu>
             </paper-menu-button>
             <small is-login="true">Hi, <span id="userName">Nam</span></small>

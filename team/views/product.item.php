@@ -24,7 +24,7 @@ function updateVisit($id)
     print_r(mysql_fetch_assoc($visit));
 }
 
-
+$avgRate = mysql_fetch_assoc(getRateAVG($product['id']));
 ?>
 <div class="container-fluid product-wrapper">
     <div class="row">
@@ -46,12 +46,16 @@ function updateVisit($id)
                             <div>
                                 <ul class="list-inline rate-group">
                                     <?php
-                                    for ($i = 1; $i < 6; $i++) {
-                                        ?>
-                                        <li><a href="javascript:void(0)"
-                                            <i class="fa star" aria-hidden="true"></i>
-                                            </a></li>
-                                    <?php } ?>
+
+                                    if ($avgRate['count(rate)'] > 0) {
+                                        for ($i = 1; $i < 6; $i++) {
+                                            ?>
+                                            <li>
+                                                <i class="fa star <?php if ($avgRate['avg(rate)'] >= $i) echo "active"; ?>"
+                                                   aria-hidden="true"></i></li>
+                                        <?php }
+                                        echo round($avgRate['avg(rate)'],2) . " (" . $avgRate['count(rate)'] . " reviews)";
+                                    } ?>
                                 </ul>
                             </div>
                             <div class="text-center">
