@@ -119,7 +119,7 @@ function getAllProduct()
 
 function getAllProductExternal()
 {
-    $external_urls = array(0 => 'http://localhost:8888/cmpe272-xaxi/service/external_products.php', 1 => 'http://konstella.me/ExportData.php');
+    $external_urls = array(0 => 'http://myxaxi.net/service/external_products.php', 1 => 'http://konstella.me/ExportData.php');
     $products = array();
     foreach ($external_urls as $url) {
 //        print_r($url);
