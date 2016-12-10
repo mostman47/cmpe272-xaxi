@@ -40,6 +40,12 @@ function getRateAVGBySite($site)
     return selectQuery($query);
 }
 
+function getRateAVGById($id)
+{
+    $query = 'SELECT product_id, avg(rate) FROM review WHERE product_id = "' . $id . '"  GROUP BY product_id order by avg(rate) DESC';
+    return selectQuery($query);
+}
+
 function getRateAVG($product_id)
 {
     $query = 'SELECT product_id, avg(rate),count(rate) FROM review WHERE product_id = "' . $product_id . '" GROUP BY product_id';

@@ -3,6 +3,7 @@ print_r($_GET['id']);
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $product = getProductById($id);
+
 //    add cookie previous
     $cookie = $_COOKIE['product-previous'];
     if (isset($cookie)) {
@@ -50,22 +51,18 @@ print_r($product);
                     <div class="row">
                         <div class="col-xs-12 col-sm-7">
                             <div>
-                                <ul class="list-inline">
-                                    <li><a href="">
-                                            <iron-icon icon="icons:star-border" item-icon></iron-icon>
-                                        </a></li>
-                                    <li><a href="">
-                                            <iron-icon icon="icons:star-border" item-icon></iron-icon>
-                                        </a></li>
-                                    <li><a href="">
-                                            <iron-icon icon="icons:star-border" item-icon></iron-icon>
-                                        </a></li>
-                                    <li><a href="">
-                                            <iron-icon icon="icons:star-border" item-icon></iron-icon>
-                                        </a></li>
-                                    <li><a href="">
-                                            <iron-icon icon="icons:star-border" item-icon></iron-icon>
-                                        </a></li>
+                                <ul class="list-inline rate-group">
+                                    <?php
+                                    $review = getReviewById($_GET['id']);;
+                                    if ($review[0]['avg(rate)'] > 0) {
+                                        for ($i = 1; $i < 6; $i++) {
+                                            ?>
+                                            <li>
+                                                <i class="fa star <?php if ($review[0]['avg(rate)'] >= $i) echo "active"; ?>"
+                                                   aria-hidden="true"></i></li>
+                                        <?php }
+                                        echo round($review[0]['avg(rate)'],2);
+                                    } ?>
                                 </ul>
                             </div>
                             <div class="text-center">
@@ -113,17 +110,24 @@ print_r($product);
                                     </section>
                                     <div class="js-ellipsis module" data-max-height="350"><p
                                             class="product-description-disclaimer"><b>Important Made in USA Origin
-                                                Disclaimer:</b> For certain items sold by Walmart on Walmart.com, the
+                                                Disclaimer:</b> For certain items sold by Walmart on Walmart.com,
+                                            the
                                             displayed country of origin
-                                            information may not be accurate or consistent with manufacturer information.
+                                            information may not be accurate or consistent with manufacturer
+                                            information.
                                             For updated, accurate country of origin data, it is
-                                            recommended that you rely on product packaging or manufacturer information.
+                                            recommended that you rely on product packaging or manufacturer
+                                            information.
                                         </p>
-                                        <p>Relax and soak up the taste of the sun with Sunkist Soda. Sunkist Soda beams
-                                            with bold, sweet orange flavor and refreshes the moment you taste it. Enjoy
-                                            Sunkist Soda anytime or mix with ice cream for delicious orange floats. Gear
+                                        <p>Relax and soak up the taste of the sun with Sunkist Soda. Sunkist Soda
+                                            beams
+                                            with bold, sweet orange flavor and refreshes the moment you taste it.
+                                            Enjoy
+                                            Sunkist Soda anytime or mix with ice cream for delicious orange floats.
+                                            Gear
                                             up for good times with the bright taste of Sunkist Soda. SUNKIST is a
-                                            registered trademark of Sunkist Growers, Inc., USA used under license by Dr
+                                            registered trademark of Sunkist Growers, Inc., USA used under license by
+                                            Dr
                                             Pepper/Seven Up, Inc. 2015 Sunkist Growers, Inc. and Dr Pepper/Seven Up,
                                             Inc.</p>
                                         <p></p>
@@ -134,7 +138,8 @@ print_r($product);
                                         <p></p>
                                         <section class="product-about js-ingredients health-about"><h3><strong>Ingredients:&nbsp;</strong>
                                             </h3>
-                                            <p><b>Ingredients:</b> Carbonated Water, High Fructose Corn Syrup, Citric
+                                            <p><b>Ingredients:</b> Carbonated Water, High Fructose Corn Syrup,
+                                                Citric
                                                 Acid, Sodium Benzoate (Preservative), Modified Food Starch, Natural
                                                 Flavors, Caffeine, Ester Gum, Yellow 6, Red 40. </p></section>
                                     </div>
@@ -155,3 +160,4 @@ print_r($product);
         </div>
     </div>
 </div>
+

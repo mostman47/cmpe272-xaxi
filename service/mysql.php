@@ -24,6 +24,21 @@ function getAllProduct()
 
 }
 
+function getReviewById($id)
+{
+    $ch = curl_init();
+    curl_setopt_array($ch, array(
+        CURLOPT_URL => 'http://myxaxi.net/team/service/export_review_id.php?site=xaxi&id=' . $id,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST => true,
+        CURLOPT_FOLLOWLOCATION => true
+    ));
+
+    $visits = curl_exec($ch);
+    $visits = json_decode($visits,true);
+    return $visits;
+}
+
 function getProductById($id)
 {
 
